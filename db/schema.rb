@@ -17,6 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_16_083803) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "surname"
+    t.string "nickname"
     t.integer "age"
     t.string "gender"
     t.string "avatar"
@@ -32,6 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_16_083803) do
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["nickname"], name: "index_users_on_nickname", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

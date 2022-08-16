@@ -20,6 +20,11 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+# RSpec.configure do |config|
+#   config.include(Shoulda::Matchers::ActiveModel, type: :model)
+#   config.include(Shoulda::Matchers::ActiveRecord, type: :model)
+# end
 #
 # The following line is provided for convenience purposes. It has the downside
 # of increasing the boot-up time by auto-requiring all files in the support
@@ -52,9 +57,6 @@ RSpec.configure do |config|
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.
   config.include Devise::TestHelpers, type: :controller
-  config.include Devise::TestHelpers, type: :view
-  config.include Warden::Test::Helpers, type: :feature
-  #
   # You can disable this behaviour by removing the line below, and instead
   # explicitly tag your specs with their type, e.g.:
   #
