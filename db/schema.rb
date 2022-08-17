@@ -16,11 +16,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_17_101901) do
 
   create_table "songs", force: :cascade do |t|
     t.text "body"
-    t.string "accords"
     t.string "name"
     t.string "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author"], name: "index_songs_on_author", unique: true
   end
 
   create_table "users", force: :cascade do |t|
