@@ -3,8 +3,9 @@ class CreateUsers < ActiveRecord::Migration[7.0]
     create_table :users do |t|
       t.string :name
       t.string :surname
-      t.string :nickname, index: { unique: true }
-      t.integer :age
+      t.string :email
+      t.string :nickname
+      t.date :age
       t.string :gender
       t.string :avatar
 
