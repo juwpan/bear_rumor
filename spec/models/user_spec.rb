@@ -28,7 +28,7 @@ RSpec.describe User, type: :model do
     end
 
     # context 'when email uniquess' do
-    #   subject { User.new(email: "juwpan_16@gmail.com") }
+    #   subject { FactoryBot.build(:user) }
 
     #   # Уникальный ник
     #   it { should validate_uniqueness_of(:email) }
