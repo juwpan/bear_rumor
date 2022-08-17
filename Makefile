@@ -4,5 +4,11 @@ dbm:
 dbr:
 	bundle exec rails db:rollback
 
-dbmt:
-	bundle exec rails db:migrate RAILS_ENV=test
+dbmtest:
+	bundle exec rails db:drop db:create db:migrate RAILS_ENV=test
+
+
+	# Rspec
+
+test:
+	bundle exec rspec
