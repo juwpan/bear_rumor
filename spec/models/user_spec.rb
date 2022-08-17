@@ -26,6 +26,13 @@ RSpec.describe User, type: :model do
       # Уникальный ник
       it { should validate_uniqueness_of(:nickname) }
     end
+
+    # context 'when email uniquess' do
+    #   subject { User.new(email: "juwpan_16@gmail.com") }
+
+    #   # Уникальный ник
+    #   it { should validate_uniqueness_of(:email) }
+    # end
   end
 
   # Проверка метода модели перед создание
