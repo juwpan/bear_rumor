@@ -7,8 +7,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :surname, presence: true
-
-  validates :gender, presence: true
+  validates :age, presence: true
 
   validates :nickname, presence: true, uniqueness: true
 

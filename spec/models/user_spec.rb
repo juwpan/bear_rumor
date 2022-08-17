@@ -13,8 +13,8 @@ RSpec.describe User, type: :model do
       it { should validate_presence_of :surname }
       # nickname validation
       it { should validate_presence_of :nickname }
-      # gender validation
-      it { should validate_presence_of :gender }
+      # age validation
+      it { should validate_presence_of :age }
       # password validation
       it { should validate_presence_of :password }
     end

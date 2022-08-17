@@ -2,9 +2,7 @@ FactoryBot.define do
   factory :user do
     name { "мишка_#{rand(999)}" }
     surname { "глухой_#{rand(999)}" }
-    age { rand(100) }
-    gender { ["м","ж"].sample }
-    avatar { "#picture_#{rand(999)}" }
+    age { "15.07.2001" }
 
     sequence(:email) { |n| "juwpan_#{n}@gmail.com" }
     sequence(:nickname) { |n| "rumor_#{n}" }
