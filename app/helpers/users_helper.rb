@@ -1,4 +1,8 @@
 module UsersHelper
+  def user_avatar(avatar)
+
+  end
+  
   def resources_name
     :user
   end
@@ -17,9 +21,9 @@ module UsersHelper
 
   def flash_class(level)
     case level
-        when :notice then "alert alert-success"
-        when :error then "alert alert-danger"
-        when :alert then "alert alert-danger"
+      when :notice then "alert alert-warning"
+      when :error then "alert alert-danger"
+      when :alert then "alert alert-danger"
     end
   end
 end
