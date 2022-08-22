@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/juwpan/Work/bear_rumor'
+bundle exec rails db:migrate
+make: Leaving directory '/home/juwpan/Work/bear_rumor'
+ 

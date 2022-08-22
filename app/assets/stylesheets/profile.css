@@ -1,5 +1,22 @@
 .container-profile {
-  margin: 10px;
-  margin-left: 30px;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 300px 2fr;
+  grid-template-rows: auto;
+  column-gap: 2em;
+  align-items: none;
+  justify-items: none;
 }
 
+.column-left-profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
+
+.column-right-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+}

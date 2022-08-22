@@ -1,7 +1,5 @@
 <div class="container-profile">
 
-  <div class="content-column-profile">
-
     <div class="column-left-profile">
 
       <div class="box-1">
@@ -10,19 +8,22 @@
         <% else %>
           <%= image_tag(@user.avatar_url)%>
         <% end %>
+      </div>
 
-        <div class="mt-2">
-            <%= link_to "Edit Profile", edit_user_registration_path %>
-        </div>
+      <div class="box-1-1">
 
-        <div class="mt-2">
-            <%= form_with model: @user do |f| %>
-              <div><%= f.label :avatar %></div>
-              <div><%= f.file_field :avatar, class: "btn btn-light" %></div>
+        <div><%= link_to "Edit", edit_user_registration_path, class: "btn btn-dark size-btn" %></div>
 
-              <div><%= f.submit "save", class: "btn btn-dark", data: { turbo: false } %></div>
-            <% end %>
-        </div>
+        <%= form_with model: @user do |f| %>
+
+
+          <div><%= f.file_field :avatar, class: "no-display" %></div>
+
+          <div class="btn btn-secondary size-btn"><%= f.label :avatar %></div>
+
+          <div><%= f.submit "Save", class: "btn btn-light mt-2 size-btn", data: { turbo: false } %></div>    
+        <% end %>
+      
       </div>
 
       <div class="box-2">
@@ -37,14 +38,25 @@
       <div class="box-3">
         Онлайн или нет
       </div>
-
-    </div>
-    
-
-
-    <div>
+      
     </div>
 
-  </div>
+    <div class="column-right-profile">
+      <div class="add-song">
+        <%= button_to "Add song", new_song_path, class: "btn btn-dark" %>
+      </div>
+
+      <div class="add-song">
+        <%= button_to "Add song", new_song_path, class: "btn btn-dark" %>
+      </div>
+
+      <div class="add-song">
+        <%= button_to "Add song", new_song_path, class: "btn btn-dark" %>
+      </div>
+
+      <div class="add-song">
+        <%= button_to "Add song", new_song_path, class: "btn btn-dark" %>
+      </div>
+    </div>
 
 </div>

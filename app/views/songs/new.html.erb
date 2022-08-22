@@ -1,0 +1,6 @@
+<div class="container">
+  <h2>Добавить песню</h2>
+  <%= form_with model:@song, get: :post do |f| %>
+    <%= f.text_field :body %>
+    <% end %>
+</div>
