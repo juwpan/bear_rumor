@@ -1,3 +1,50 @@
-<div class="container">
-  <%= @user.name %>
+<div class="container-profile">
+
+  <div class="content-column-profile">
+
+    <div class="column-left-profile">
+
+      <div class="box-1">
+        <% if @user.avatar.nil? %>
+          <%= image_tag("no-user-image.gif", class: "img-avatar") %>
+        <% else %>
+          <%= image_tag(@user.avatar_url)%>
+        <% end %>
+
+        <div class="mt-2">
+            <%= link_to "Edit Profile", edit_user_registration_path %>
+        </div>
+
+        <div class="mt-2">
+            <%= form_with model: @user do |f| %>
+              <div><%= f.label :avatar %></div>
+              <div><%= f.file_field :avatar, class: "btn btn-light" %></div>
+
+              <div><%= f.submit "save", class: "btn btn-dark", data: { turbo: false } %></div>
+            <% end %>
+        </div>
+      </div>
+
+      <div class="box-2">
+        <div class="fs-4 text">Name: <%= @user.name %></div>
+
+        <div class="fs-4 text">NickName: <%= @user.nickname %></div>
+
+        <%# # Подтверждена почта или нет реализовать%>
+        <div class="fs-4 text">Email: <%= @user.email %></div>
+      </div>
+
+      <div class="box-3">
+        Онлайн или нет
+      </div>
+
+    </div>
+    
+
+
+    <div>
+    </div>
+
+  </div>
+
 </div>
