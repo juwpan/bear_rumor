@@ -1,2 +1,15 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+@import "@fortawesome/fontawesome-free/css/all";
+@import "content";
+@import "column";
+@import "registration";
+@import "errors";
+@import "profile";
+@import "footer";
+@import "avatar";
+@import "box";
+
+@import "header";
+
