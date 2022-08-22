@@ -9,12 +9,10 @@ RSpec.describe User, type: :model do
       it { should validate_presence_of :email }
       # name validation
       it { should validate_presence_of :name }
-      # surname validation
-      it { should validate_presence_of :surname }
       # nickname validation
       it { should validate_presence_of :nickname }
-      # age validation
-      it { should validate_presence_of :age }
+      # birth_date validation
+      it { should validate_presence_of :birth_date }
       # password validation
       it { should validate_presence_of :password }
     end
@@ -25,14 +23,9 @@ RSpec.describe User, type: :model do
 
       # Уникальный ник
       it { should validate_uniqueness_of(:nickname) }
+      # #
+      # it { should validate_uniqueness_of(:email) }
     end
-
-    # context 'when email uniquess' do
-    #   subject { FactoryBot.build(:user) }
-
-    #   # Уникальный ник
-    #   it { should validate_uniqueness_of(:email) }
-    # end
   end
 
   # Проверка метода модели перед создание
@@ -42,10 +35,6 @@ RSpec.describe User, type: :model do
       # Должен вернуть заглавную букву имени
       it 'should return name.capitalize' do
         expect(user.name[0].first).to eq('М')
-      end
-      # Должен вернуть заглавную букву фамилии
-      it 'should return surname.capitalize' do
-        expect(user.surname[0].first).to eq('Г')
       end
     end
   end
