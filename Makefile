@@ -7,8 +7,7 @@ dbr:
 dbm-test:
 	bundle exec rails db:drop db:create db:migrate RAILS_ENV=test
 
-
-	# Rspec
+# Rspec
 
 test:
 	bundle exec rspec
