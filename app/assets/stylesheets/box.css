@@ -1,0 +1,22 @@
+.box-1 {
+  grid-column: 1fr;
+  border: 1px solid grey;
+  padding: 10px;
+  background-color: antiquewhite;
+}
+
+.box-2 {
+  display: grid;
+  grid-column: 1fr;
+  border: 1px solid grey;
+  padding: 50px;
+  row-gap: 20px ;
+  background-color: antiquewhite;
+}
+
+.box-3 {
+  grid-column: 1fr;
+  border: 1px solid grey;
+  padding: 50px;
+  background-color: antiquewhite;
+}

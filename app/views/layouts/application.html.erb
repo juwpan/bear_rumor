@@ -5,13 +5,56 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <!-- Font-Awesome -->
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
   </head>
-
   <body>
-    <%= render "devise/shared/flash" %>
-      <%= yield %>
+
+    <div class="wrapper">
+      <header class="p-1 bg-dark text-white mb-2">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <div class="d-flex align-items-center me-5 mb-lg-0 text-white text-decoration-none fas fa-solid fa-music">
+            </div>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><%= link_to "Главная", root_path , class: "nav-link px-2 text-secondary" %></li>
+              <li><%= link_to "Топ 100", root_path , class: "nav-link px-2 text-white" %></li>
+              <li><%= link_to "О нас", root_path , class: "nav-link px-2 text-white" %></li>
+            </ul>
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+              <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+            </form>
+            <div class="text-end">
+              <% if user_signed_in? %>
+                <%= link_to "Личный кабинет", current_user, data: { turbo: false },  class: "btn btn-light" %>
+                <%= link_to "Выход", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "btn btn-secondary" %>
+              <% else %>
+                <%= link_to "Авторизация", new_user_registration_path,  class: "btn btn-light" %>
+                <%= link_to "Вход", new_user_session_path,  class: "btn btn-secondary" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <%= render "devise/shared/flash" %>
+      <div class="main">
+        <%= yield %>
+      </div>
+      <%# 
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2021 Company, Inc</p>
+      </footer>
+      %>
+    </div>
   </body>
 </html>

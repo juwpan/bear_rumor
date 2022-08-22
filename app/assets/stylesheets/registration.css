@@ -1,0 +1,62 @@
+.title-registration {
+  text-align: center;
+  background-size: black;
+  border-bottom: 1px solid black;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.registraion-container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.822);
+}
+
+.registration-form {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: auto;
+  border: 1px solid black;
+  background-color: rgb(204, 203, 203);
+  color: rgb(59, 59, 59);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.actions-field {
+  display: grid;
+  align-items: none;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  padding: 10px;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 5px;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.btn-field-left {
+  justify-self: center;
+}
+
+.btn-field-right {
+  justify-self: center;
+}
+
+.btn-field-center {
+  justify-items: center;
+  align-items: center;
+  grid-column: span 2;
+}
