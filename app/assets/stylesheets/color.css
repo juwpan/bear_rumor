@@ -1,0 +1,12 @@
+.color-grey {
+  background-color: gainsboro;
+}
+
+.link-white {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.link-white:hover {
+  color: rgb(149, 149, 149);
+}

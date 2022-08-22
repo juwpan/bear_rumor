@@ -1,3 +1,40 @@
+.registration-edit-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-items: center;
+  background-color: #e8e8e8;
+  color: rgb(0, 0, 0);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.form-edit {
+  display: block;
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-edit:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+
 .title-registration {
   text-align: center;
   background-size: black;
