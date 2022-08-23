@@ -1,3 +1,33 @@
-<%= form_with model:@song, methode: :get  do |f| %>
-  <%= f.text_field :body %>
-<% end %>
+<div class="registration-edit-form">
+
+    <%= form_with model: @song, method: :put, class: 'form-horizontal' do |f| %>
+      <div class="form-group mb-3">
+        <%= f.label :name, class: 'col-sm-2 control-label'  %>
+        <div class="col-12">
+          <%= f.text_field :name, autofocus: true, class: 'form-edit'  %>
+        </div>
+      </div>
+
+      <div class="form-group mb-3">
+        <%= f.label :body, class: "col-sm-2" %>
+        <div class="col-12">
+          <%= f.text_area :body, size: "60x10", class: "form-edit" %>
+        </div>
+      </div>
+
+      <div class="form-group mb-3">
+        <%= f.label :author, class: 'col-sm-2 control-label'  %>
+        <div class="col-12">
+          <%= f.text_field :author, class: 'form-edit'  %>
+        </div>
+      </div>
+  
+      <div class="form-group mb-3 mt-2">
+        <div class="col-sm-offset-2 col-12">
+          <%= f.submit "Сохранить", class: "btn btn-dark", data: { turbo: false } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <p class="title-registration"><%= link_to "Back", current_user, data: { turbo: false }, class: "link-white" %></p>
+</div>

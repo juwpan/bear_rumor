@@ -1,11 +1,11 @@
-<%= turbo_frame_tag Song.new do %>
-
 <div class="container">
 
-  <h2>Добавить аккорды</h2>
+  <div class="mb-2">
+    <%= render "partial/error_messages", model: @song %>
+  </div>
+
+  <h2 class="title-registration">Добавит песню: <%= "@#{current_user.name}" %></h2>
 
   <%= render "songs/form" %>
-  
-</div>
 
-<% end %>
+</div>
