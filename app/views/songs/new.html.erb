@@ -1,6 +1,11 @@
+<%= turbo_frame_tag Song.new do %>
+
 <div class="container">
-  <h2>Добавить песню</h2>
-  <%= form_with model:@song, get: :post do |f| %>
-    <%= f.text_field :body %>
-    <% end %>
+
+  <h2>Добавить аккорды</h2>
+
+  <%= render "songs/form" %>
+  
 </div>
+
+<% end %>

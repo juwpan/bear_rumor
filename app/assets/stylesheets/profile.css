@@ -2,7 +2,6 @@
   margin: 20px;
   display: grid;
   grid-template-columns: 300px 2fr;
-  grid-template-rows: auto;
   column-gap: 2em;
   align-items: none;
   justify-items: none;
@@ -15,8 +14,7 @@
 }
 
 .column-right-profile {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 50px;
 }

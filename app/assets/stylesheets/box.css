@@ -2,7 +2,7 @@
   grid-column: 1fr;
   border: 1px solid grey;
   padding: 10px;
-  background-color: antiquewhite;
+  background-color: rgb(220, 220, 220);
 }
 
 .box-1-1 {
@@ -11,7 +11,7 @@
   column-gap: 5px;
   row-gap: 5px;
   padding: 10px;
-  background-color: antiquewhite;
+  background-color: rgb(220, 220, 220);
 }
 
 .box-2 {
@@ -20,17 +20,21 @@
   border: 1px solid grey;
   padding: 10px;
   row-gap: 10px ;
-  background-color: antiquewhite;
+  background-color: rgb(220, 220, 220);
 }
 
 .box-3 {
   grid-column: 1fr;
   border: 1px solid grey;
   padding: 50px;
-  background-color: antiquewhite;
+  background-color: rgb(220, 220, 220);
 }
 
 .add-song {
-  grid-template-columns: 1fr;
-  background-color: antiquewhite;
+  justify-self: center;
 }
+
+.border-box {
+  border: 0.1px solid rgba(128, 128, 128, 0.331);
+}
+
