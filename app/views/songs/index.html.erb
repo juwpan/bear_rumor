@@ -1,7 +1,7 @@
 <div class="content-column">
   <div class="column-left">
     <% @songs.each do |song| %>
-      <%= song %>
+      <p><%= link_to "#{song.title}", song_path(song.id) %></p>
     <% end %>
   </div>
 

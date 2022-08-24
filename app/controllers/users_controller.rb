@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, except: %i[show index]
+  # before_action :authenticate_user!, except: %i[show index]
   before_action :set_user, only: %i[show destroy update]
   before_action :user_params, only: %i[new create update]
 

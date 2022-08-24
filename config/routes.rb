@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root "songs#index"
 
-  resources :users, only: %i[show update]
-  
+  resources :users
+
   resources :songs
 end

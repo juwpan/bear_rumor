@@ -1,10 +1,11 @@
 <div class="registration-edit-form">
 
-    <%= form_with model: @song, method: :put, class: 'form-horizontal' do |f| %>
+    <%= form_with model:@song, class: 'form-horizontal'  do |f|  %>
+
       <div class="form-group mb-3">
-        <%= f.label :name, class: 'col-sm-2 control-label'  %>
+        <%= f.label :title, class: 'col-sm-2 control-label'  %>
         <div class="col-12">
-          <%= f.text_field :name, autofocus: true, class: 'form-edit'  %>
+          <%= f.text_field :title, class: 'form-edit'  %>
         </div>
       </div>
 
@@ -24,7 +25,7 @@
   
       <div class="form-group mb-3 mt-2">
         <div class="col-sm-offset-2 col-12">
-          <%= f.submit "Сохранить", class: "btn btn-dark", data: { turbo: false } %>
+          <%= f.submit "Сохранить", class: "btn btn-dark" %>
         </div>
       </div>
     <% end %>

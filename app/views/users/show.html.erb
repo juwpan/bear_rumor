@@ -8,11 +8,11 @@
     <div class="column-left-profile">
 
       <div class="box-1">
-        <% if @user.avatar.nil? %>
+        <%# <% if @user.avatar.nil? %>
           <%= image_tag("no-user-image.gif", class: "img-avatar") %>
-        <% else %>
-          <%= image_tag(@user.avatar_url)%>
-        <% end %>
+        <%# <% else %>
+          <%# <%= image_tag(@user.avatar_url)%>
+        <%# <% end %>
       </div>
 
       <div class="box-1-1">
