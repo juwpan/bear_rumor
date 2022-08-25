@@ -24,6 +24,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem 'devise', "~> 4.8.1"
 # gem "sassc-rails"
 
+gem "aws-sdk-s3", require: false
 gem "image_processing", ">= 1.12.2"
 gem 'carrierwave', '~> 2.0'
 gem 'rmagick', '~> 4.2.6'
