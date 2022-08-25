@@ -1,0 +1,9 @@
+.danger-alert {
+  background-color: #B9848C;
+  color: rgb(255, 255, 255);
+}
+
+.warning-alert {
+  background-color: #806491;
+  color: rgb(255, 255, 255);
+}

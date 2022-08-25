@@ -11,7 +11,6 @@ RSpec.describe UsersController, type: :controller do
       it "will give status 200" do
         expect(response.status).to eq(200)
       end
-
     end
   end
 end

@@ -1,0 +1,20 @@
+.errors-form {
+  padding: 20px;
+  border: 1px solid #63646454;
+  background-color: #835482;
+  color: #ffffff;
+}
+
+.errors_messages {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.title-errors {
+  border-bottom: 1px solid white;
+}
+
+.text-error {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}

@@ -1,56 +1,67 @@
-<h2>Sign up</h2>
+<div class="registraion-container">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  <div class="errors_messages">
+    <%= render "devise/shared/error_messages", resource: resource %>
   </div>
 
-  <div class="field">
-    <%= f.label :surname %><br />
-    <%= f.text_field :surname, autofocus: true, autocomplete: "surname" %>
+  <div class="registration-form m-3">
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      
+      <h2 class="title-registration">Registraion</h2>
+
+      <div class="field mt-2">
+        <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+      </div>
+    
+      <div class="field mt-2">
+        <%= f.label :nickname %>
+        <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
+      </div>
+
+      <div class="field mt-2">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field mt-2">
+        <%= f.label :password %>
+
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field mt-2">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field mt-2">
+        <%= f.label :birth_date %>
+        <div>
+          <%= f.date_select(:birth_date,
+                    include_blank: false,
+                    selected: Date.today,
+                    start_year: Date.today.year - 100,
+                    end_year: Date.today.year - 0 ) %>
+        </div>
+      </div>
+
+      <div class="field mt-2">
+        <div><%= f.select :gender, ["man", "woman"] %></div>
+      </div>
+      
+      <div class="actions-field mt-3">
+        <div><%= f.submit "Sign up", class: "btn btn-dark", data: { turbo: false } %></div>
+        <%= render "devise/shared/links" %>
+      </div>
+
+    <% end %>
   </div>
 
-  <div class="field">
-    <%= f.label :nickname %><br />
-    <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
-  </div>
-
-  <div class="field">
-    <%= f.radio_button :age, "child" %>
-    <%= f.label :age_child, "I am younger than 21" %>
-    <%= f.radio_button :age, "adult" %>
-    <%= f.label :age_adult, "I am over 21" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.text_field :gender, autofocus: true, autocomplete: "gender" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
+<%# <div class="btn-field-right"><%= render "devise/shared/links" %>

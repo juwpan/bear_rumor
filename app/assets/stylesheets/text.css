@@ -1,0 +1,52 @@
+.title-author {
+  text-align: center;
+  border-bottom: 1px solid black;
+  background-color: rgb(132, 132, 132);
+  color: rgb(255, 255, 255);
+}
+
+
+.title-registration {
+  text-align: center;
+  background-size: black;
+  border-bottom: 1px solid black;
+  background-color: rgb(34, 125, 189);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+
+.text-white-back {
+  color: rgb(254, 254, 254);
+  text-decoration: none;
+}
+
+.text-white {
+  color: rgb(255, 255, 255);
+}
+
+.text-white-back:hover {
+  color: rgb(205, 205, 205);
+}
+
+.body-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-items: center;
+  background-color: #e8e8e8;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  white-space: pre-line
+}
+
+.text-instructions {
+  font-size: 15px;
+  color:  rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.text-instructions:hover {
+  color: aqua;
+}

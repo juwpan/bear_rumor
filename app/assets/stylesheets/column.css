@@ -1,0 +1,26 @@
+.column-left {
+  border-right: 1px solid grey;
+  grid-template-rows: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.border-column {
+  border-bottom: 5px solid grey;
+}
+
+.column-center {
+  border-right: 1px solid grey;
+  grid-template-rows: auto;
+  display: grid;
+}
+
+.column-right {
+  border-right: 1px solid grey;
+  grid-template-rows: auto;
+  display: grid;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}

@@ -1,0 +1,15 @@
+
+<div class="container">
+
+<p class="title-author fs-4 text"><%= "#{@song.author}" %></p>
+
+<h2 class="title-registration"><%= "#{@song.title} - аккорды" %></h2>
+  
+<div class="col-12">
+  <div class="body-form">
+    <%= @song.body %>
+  </div>
+</div>
+
+    <p class="title-registration"><%= link_to "Back", :back, class: "text-white-back" %></p>
+</div>

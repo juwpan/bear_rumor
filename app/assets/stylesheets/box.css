@@ -1,0 +1,40 @@
+.box-1 {
+  grid-column: 1fr;
+  border: 1px solid grey;
+  padding: 10px;
+  background-color: rgb(220, 220, 220);
+}
+
+.box-1-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 5px;
+  row-gap: 5px;
+  padding: 10px;
+  background-color: rgb(220, 220, 220);
+}
+
+.box-2 {
+  display: grid;
+  grid-column: 1fr;
+  border: 1px solid grey;
+  padding: 10px;
+  row-gap: 10px ;
+  background-color: rgb(220, 220, 220);
+}
+
+.box-3 {
+  grid-column: 1fr;
+  border: 1px solid grey;
+  padding: 50px;
+  background-color: rgb(220, 220, 220);
+}
+
+.add-song {
+  justify-self: center;
+}
+
+.border-box {
+  border: 0.1px solid rgba(128, 128, 128, 0.331);
+}
+

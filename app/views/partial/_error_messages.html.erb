@@ -1,0 +1,16 @@
+  <% errors = model.errors %>
+    <div class="errors-form">
+      <div id="error_explanation">
+        <h4>
+          <%= I18n.t("errors.messages.not_saved",
+                  count: errors.count,
+                  resource: model.class.model_name.human.downcase)
+        %>
+        </h4>
+        <ul>
+          <% errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
