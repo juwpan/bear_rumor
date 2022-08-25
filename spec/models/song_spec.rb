@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe Song, type: :model do
   describe '#validations_check' do
     context 'when validations presence' do
-      # name validation
-      it { should validate_presence_of :name }
+      # title validation
+      it { should validate_presence_of :title }
       # body validation
       it { should validate_presence_of :body }
     end

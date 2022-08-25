@@ -21,9 +21,9 @@ module UsersHelper
 
   def flash_class(level)
     case level
-      when :notice then "alert alert-warning"
-      when :error then "alert alert-danger"
-      when :alert then "alert alert-danger"
+      when :notice then "alert warning-alert"
+      when :error then "alert danger-alert"
+      when :alert then "alert danger-alert"
     end
   end
 end
