@@ -27,10 +27,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_17_101901) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.string "email", default: "", null: false
     t.string "nickname"
     t.date "birth_date"
     t.string "avatar"
+    t.string "email", default: "", null: false
+    t.string "gender"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "encrypted_password", default: "", null: false

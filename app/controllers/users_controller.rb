@@ -1,14 +1,14 @@
 class UsersController < ApplicationController
   # before_action :authenticate_user!, except: %i[show index]
   before_action :set_user, only: %i[show destroy update]
-  before_action :user_params, only: %i[new create update]
+  before_action :user_params, only: %i[update]
 
   def edit
   end
 
   def update
     if @user.update(user_params)
-      redirect_to current_user, notice: "Фотография обновлена"
+      redirect_to current_user, notice: "Профиль обновлён"
     else
       render current_user, alert: "Обновить не удалось"
     end
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :nickname, :birth_date, :avatar, :email)
+    params.require(:user).permit(:name, :nickname, :birth_date, :avatar, :email, :gender)
   end
 
   def set_user
