@@ -8,25 +8,23 @@
     <div class="column-left-profile">
 
       <div class="box-1">
-        <%# <% if @user.avatar.nil? %>
-          <%= image_tag("no-user-image.gif", class: "img-avatar") %>
-        <%# <% else %>
-          <%# <%= image_tag(@user.avatar_url)%>
-        <%# <% end %>
+        <%= user_avatar(@user)  %>
       </div>
 
       <div class="box-1-1">
 
-        <div><%= link_to "Edit", edit_user_registration_path, class: "btn btn-dark size-btn" %></div>
+        <div>
+          <%= link_to "Edit", edit_user_registration_path, class: "btn btn-dark size-btn" %>
+        </div>
 
         <%= form_with model: @user do |f| %>
 
-
+          <div><%= f.label :avatar, class: "btn btn-secondary size-btn" %></div>
           <div><%= f.file_field :avatar, class: "no-display" %></div>
 
-          <div class="btn btn-secondary size-btn"><%= f.label :avatar %></div>
-
-          <div><%= f.submit "Save", class: "btn btn-light mt-2 size-btn", data: { turbo: false } %></div>    
+          <div>
+            <%= f.submit "Save", class: "btn btn-light mt-2 size-btn", data: { turbo: false } %>
+          </div>    
         <% end %>
       
       </div>

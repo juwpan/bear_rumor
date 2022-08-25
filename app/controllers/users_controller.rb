@@ -7,7 +7,11 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update(user_params)
+    params_avatar = params.require(:user).permit(:avatar)
+    
+    if @user.update(params_avatar)
+      redirect_to current_user, notice: "Фото обновлёно"
+    elsif @user.update(user_params)
       redirect_to current_user, notice: "Профиль обновлён"
     else
       render current_user, alert: "Обновить не удалось"
