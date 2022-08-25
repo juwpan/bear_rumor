@@ -1,36 +1,48 @@
 <div class="registraion-container">
 
-  <%= render "devise/shared/error_messages", resource: resource %>
-  
-  <div class="registration-form">
+  <div class="errors_messages">
+    <%= render "devise/shared/error_messages", resource: resource %>
+  </div>
+
+  <div class="registration-form m-3">
+
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      
       <h2 class="title-registration">Registraion</h2>
+
       <div class="field mt-2">
         <%= f.label :name %>
         <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
       </div>
+    
       <div class="field mt-2">
         <%= f.label :nickname %>
         <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
       </div>
+
       <div class="field mt-2">
         <%= f.label :email %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
+
       <div class="field mt-2">
         <%= f.label :password %>
+
         <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %>
+        
         <%= f.password_field :password, autocomplete: "new-password" %>
       </div>
+
       <div class="field mt-2">
-        <div><%= f.label :password_confirmation %></div>
-        <div><%= f.password_field :password_confirmation, autocomplete: "new-password" %></div>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
       </div>
+
       <div class="field mt-2">
-        <div><%= f.label :birth_date %></div>
-        <div class>
+        <%= f.label :birth_date %>
+        <div>
           <%= f.date_select(:birth_date,
                     include_blank: false,
                     selected: Date.today,
@@ -38,12 +50,18 @@
                     end_year: Date.today.year - 0 ) %>
         </div>
       </div>
-      <div class="actions-field mt-3">
-          <div><%= f.submit "Sign up", class: "btn btn-dark", data: { turbo: false } %></div>
-          <%= render "devise/shared/links" %>
+
+      <div class="field mt-2">
+        <div><%= f.select :gender, ["man", "woman"] %></div>
       </div>
+      
+      <div class="actions-field mt-3">
+        <div><%= f.submit "Sign up", class: "btn btn-dark", data: { turbo: false } %></div>
+        <%= render "devise/shared/links" %>
+      </div>
+
     <% end %>
   </div>
-</div>
 
+</div>
 <%# <div class="btn-field-right"><%= render "devise/shared/links" %>

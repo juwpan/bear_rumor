@@ -1,9 +1,28 @@
+
+.registraion-container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr;
+}
+
+.registration-form {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: auto;
+  border: 1px solid black;
+  background-color: rgb(203, 204, 204);
+  color: rgb(59, 59, 59);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+
 .registration-edit-form {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  align-items: none;
-  justify-items: none;
+  align-items: center;
+  justify-items: center;
   background-color: #e8e8e8;
   color: rgb(0, 0, 0);
   padding: 20px;
@@ -29,38 +48,7 @@
   background-color: #fff;
   border-color: #86b7fe;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-}
-
-
-.title-registration {
-  text-align: center;
-  background-size: black;
-  border-bottom: 1px solid black;
-  background-color: black;
-  color: rgb(255, 255, 255);
-  padding: 10px;
-}
-
-.registraion-container {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(240, 240, 240, 0.822);
-}
-
-.registration-form {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  padding: auto;
-  border: 1px solid black;
-  background-color: rgb(204, 203, 203);
-  color: rgb(59, 59, 59);
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25)
 }
 
 .actions-field {
@@ -78,8 +66,8 @@
   grid-template-columns: 1fr;
   row-gap: 5px;
   text-align: center;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .btn-field-left {
