@@ -1,6 +1,13 @@
 module UsersHelper
-  def user_avatar(avatar)
-
+  def user_avatar(user)
+    unless user.avatar.attached?
+      case user.gender
+        when "man" then image_tag("nouser.png", class: "img-avatar")
+        when "woman" then image_tag("woman.png", class: "img-avatar")
+      end
+    else
+      image_tag user.avatar.variant(:thumb)
+    end
   end
   
   def resources_name
