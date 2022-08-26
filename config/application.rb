@@ -22,17 +22,19 @@ module BearRumor
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+
     config.active_storage.variant_processor = :mini_magick
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
     # Configuration for the application, engines, and railties goes here.
-    config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-
+    config.action_mailer.delivery_method = :mailjet
     # Don't generate system test files.
     config.generators.system_tests = nil
   end
