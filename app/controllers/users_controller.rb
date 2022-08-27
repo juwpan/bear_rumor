@@ -6,16 +6,6 @@ class UsersController < ApplicationController
   def edit
   end
 
-  # def create
-  #   if @user.save(user_params)
-  #     UserMailer.confirmation_instructions(@user).delivery_later
-
-  #     redirect_to root_path, notice: "Добро пожаловать, подтвердите пожалуйста свою почту"
-  #   else
-  #     render new_user_registration_path, alert: "Регистрация не удалась"
-  #   end
-  # end
-
   def update
     params_avatar = params.require(:user).permit(:avatar)
     

@@ -27,7 +27,7 @@ RSpec.describe User, type: :model do
     end
   end
 
-  # Проверка метода модели перед создание
+  # Проверка метода модели перед созданием
   describe '#capitalize' do
     context 'when capitalized' do
       let(:user) { create(:user) }
@@ -39,6 +39,7 @@ RSpec.describe User, type: :model do
     end
   end
 
+  # Проверка атрибутов вновь соданного ползователя
   describe 'attributes user' do
     context 'when correct valid attributes' do
       let(:user) { create(:user) }

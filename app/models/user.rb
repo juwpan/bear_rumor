@@ -10,15 +10,12 @@ class User < ApplicationRecord
         :confirmable
 
   before_create :capitalize
-
-  # mount_uploader :avatar, AvatarUploader
   
   validates :name, presence: true, length: { maximum: 350 }
   validates :birth_date, presence: true
   validates :gender, presence: true
 
   validates :nickname, presence: true, uniqueness: true
-
 
   def capitalize
     name.capitalize!
