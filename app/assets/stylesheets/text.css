@@ -22,7 +22,7 @@
 }
 
 .text-white {
-  color: rgb(255, 255, 255);
+  color: #000;
 }
 
 .text-white-back:hover {
@@ -38,7 +38,8 @@
   background-color: #e8e8e8;
   color: rgb(0, 0, 0);
   padding: 10px;
-  white-space: pre-line
+  white-space: pre-line;
+  white-space: pre-wrap
 }
 
 .text-instructions {

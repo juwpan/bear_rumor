@@ -1,0 +1,14 @@
+<div class="container">
+
+<h2 class="title-registration"><%= "#{ @author.name }" %></h2>
+  
+<div class="col-12">
+  <div class="body-form">
+    <% @author.songs.each do |x| %>
+    <%= link_to x.title, song_path(x.id) %>
+    <% end %>
+  </div>
+</div>
+
+    <p class="title-registration"><%= link_to "Back", :back, class: "text-white-back" %></p>
+</div>

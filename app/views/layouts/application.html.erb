@@ -14,7 +14,7 @@
 
     <div class="wrapper">
 
-      <header class="p-2 bg-dark text-white mb-2">
+      <header class="p-2 bg-color-header text-white mb-2">
         <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <div class="d-flex align-items-center me-5 mb-lg-0 text-white text-decoration-none fas fa-solid fa-music">
@@ -39,11 +39,8 @@
           </div>
         </div>
       </header>
-      
-      <div class="me-3 ms-3">
-        <%= render "devise/shared/flash" %>
-      </div>
 
+      <%= render "devise/shared/flash" %>
 
       <main class="main">
         <%= yield %>
