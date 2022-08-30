@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :song do
-    body { "body_#{rand(999)}" }
-    title { "accord_#{rand(999)}" }
+    body { "Сдесь должна быть ваша песня с аккордами_#{rand(999)}" }
+    title { "Название песенки что добавил пользователь_#{rand(999)}" }
 
-    sequence(:author) { |n| "author_#{n}" }
+    sequence(:name_author) { |n| "Дуда Мара Тотем спирит_#{n}" }
   end
 end

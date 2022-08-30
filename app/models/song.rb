@@ -10,7 +10,7 @@ class Song < ApplicationRecord
   validates :name_author, presence: true
 
   def author_songs
-    authors = Author.find_or_create_by!(name: self.name_author) 
+    authors = Author.find_or_create_by!(name: self.name_author)
     self.authors << authors
   end
 end
