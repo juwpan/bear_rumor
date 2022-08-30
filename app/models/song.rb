@@ -1,15 +1,16 @@
 class Song < ApplicationRecord
   belongs_to :user
+  has_many :author_uniqs
+  has_many :authors, through: :author_uniqs
 
-  # before_create :user_id
+  before_create :author_songs
 
   validates :title, presence: true
   validates :body, presence: true
-  validates :author, presence: true, uniqueness: true
+  validates :name_author, presence: true
 
-  # def user_id
-  #   self.new(user: current_user)
-
-  #   debugger
-  # end
+  def author_songs
+    authors = Author.find_or_create_by!(name: self.name_author) 
+    self.authors << authors
+  end
 end

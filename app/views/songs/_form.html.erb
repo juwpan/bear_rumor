@@ -12,20 +12,20 @@
       <div class="form-group mb-3">
         <%= f.label :body, class: "col-sm-2" %>
         <div class="col-12">
-          <%= f.text_area :body, size: "60x10", class: "form-edit" %>
+          <%= f.text_area :body, autofocus: true, size: "60x10", class: "form-edit" %>
         </div>
       </div>
 
       <div class="form-group mb-3">
         <%= f.label :author, class: 'col-sm-2 control-label'  %>
         <div class="col-12">
-          <%= f.text_field :author, class: 'form-edit'  %>
+          <%= f.text_field :name_author, class: 'form-edit'  %>
         </div>
       </div>
   
       <div class="form-group mb-3 mt-2">
         <div class="col-sm-offset-2 col-12">
-          <%= f.submit "Сохранить", class: "btn btn-dark" %>
+          <%= f.submit "Сохранить", class: "btn btn-dark", data: { turbo: false } %>
         </div>
       </div>
     <% end %>

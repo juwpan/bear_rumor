@@ -1,16 +1,22 @@
 <div class="content-column">
-  <div class="column-left">
+  <div class="column-left m-3 text-center">
+  <h2 class="title-registration"><%= "Последние добавленные" %></h2>
     <% @songs.each do |song| %>
       <p><%= link_to "#{song.title}", song_path(song.id) %></p>
     <% end %>
   </div>
 
   <div class="column-center">
-  2
+    Центр
   </div>
 
-  <div class="column-right">
-  3
+  <div class="column-right m-3 text-center">
+  <h2 class="title-registration"><%= "По авторам" %></h2>
+    <% @authors.each do |author|%>
+    <% unless author.songs.blank? %>
+      <%= link_to author.name, author_path(author.id) %>
+    <% end %>
+  <% end %>
   </div>
 </div>
 

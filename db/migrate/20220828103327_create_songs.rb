@@ -3,9 +3,9 @@ class CreateSongs < ActiveRecord::Migration[7.0]
     create_table :songs do |t|
       t.text :body
       t.string :title
-      t.string :author, index: { unique: true }
+      t.string :name_author
       
-      t.references :user, index: true, foreign_key: true
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
