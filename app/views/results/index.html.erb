@@ -1,0 +1,10 @@
+<h3>Результаты поиска по запросу <em><%= params[:query]%></em></h3>
+<% if @search_results.empty?  %>
+  <p class="fs-4 text mt-4">Ничего не найдено по этому запросу</p>
+<% else %>
+  <% @search_results.each do |result| %>
+    <div><%= result.name_author.html_safe %></div>
+    <h4><%= link_to result.title, result %></h4>
+    <hr>
+  <% end %>
+<% end %>

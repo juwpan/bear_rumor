@@ -24,9 +24,11 @@
               <li><%= link_to "Топ 100", root_path , class: "nav-link px-2 text-white" %></li>
               <li><%= link_to "О нас", root_path , class: "nav-link px-2 text-white" %></li>
             </ul>
+
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-              <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+              <%= render "results/search_form" %>
             </form>
+            
             <div class="text-end">
               <% if user_signed_in? %>
                 <%= link_to "Личный кабинет", current_user, data: { turbo: false },  class: "btn btn-light" %>
