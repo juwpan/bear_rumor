@@ -1,7 +1,6 @@
 .container-profile {
-  margin: 20px;
   display: grid;
-  grid-template-columns: 0.5fr 2fr;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
   column-gap: 2em;
   align-items: none;
   justify-items: none;
@@ -13,8 +12,16 @@
   gap: 5px;
 }
 
+.column-center-profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px;
+  row-gap: 50px;
+}
+
 .column-right-profile {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 50px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr;
+  gap: 5px;
 }

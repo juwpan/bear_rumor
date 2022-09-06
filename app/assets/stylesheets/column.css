@@ -1,5 +1,24 @@
+.content-column {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
 .column-left {
-  border-right: 1px solid grey;
+  display: grid;
+  grid-template-rows: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.column-center {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  justify-items: center;
+  border: 0.1px solid gainsboro;
+  padding: 15px;
+  gap: 15px;
+}
+
+.column-right {
   grid-template-rows: auto;
   display: grid;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -7,16 +26,4 @@
 
 .border-column {
   border-bottom: 5px solid grey;
-}
-
-.column-center {
-  grid-template-rows: auto;
-  display: grid;
-}
-
-.column-right {
-  border-right: 1px solid grey;
-  grid-template-rows: auto;
-  display: grid;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }

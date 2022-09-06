@@ -1,9 +1,10 @@
 .size-btn {
-  max-width: 100px;
+  max-width: 130px;
 }
 
 .btn {
   min-width: 120px;
+  border-radius: 0px;
 }
 
 .size-btn-song {
@@ -28,6 +29,16 @@
 }
 
 
-a.size-btn-song {
-  color: rgb(255, 255, 255);
+.btn-field-left {
+  justify-self: center;
+}
+
+.btn-field-right {
+  justify-self: center;
+}
+
+.btn-field-center {
+  justify-items: center;
+  align-items: center;
+  grid-column: span 2;
 }

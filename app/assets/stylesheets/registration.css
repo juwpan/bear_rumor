@@ -69,17 +69,3 @@
   padding-right: 30px;
   padding-left: 30px;
 }
-
-.btn-field-left {
-  justify-self: center;
-}
-
-.btn-field-right {
-  justify-self: center;
-}
-
-.btn-field-center {
-  justify-items: center;
-  align-items: center;
-  grid-column: span 2;
-}

@@ -1,0 +1,30 @@
+a.size-btn-song {
+  color: rgb(255, 255, 255);
+}
+
+a.color-blue {
+  color: blue;
+  text-decoration: none;
+}
+
+a.color-blue:hover {
+  border: 1px solid burlywood;
+  background-color: burlywood;
+  border-radius: 30%;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.link-white {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.link-white:hover {
+  color: rgb(149, 149, 149);
+}
+
+a.fas.fa-solid.fa-house {
+  color: #000;
+  text-decoration: none;
+}

@@ -7,3 +7,15 @@
   background-color: #25844a8f;
   color: rgb(255, 255, 255);
 }
+
+.errors-form {
+  padding: 20px;
+  border: 1px solid #63646454;
+  background-color: #B9848C;
+  color: #000000;
+}
+
+.errors_messages {
+  display: grid;
+  grid-template-columns: 1fr;
+}

@@ -1,17 +1,38 @@
 .box-1 {
-  grid-column: 1fr;
-  border: 1px solid grey;
+  grid-column: auto;
+  grid-row: auto;
+  border: 1px solid rgb(218, 218, 218);
   padding: 10px;
   background-color: rgb(220, 220, 220);
 }
 
-.box-1-1 {
-  display: grid;
-  grid-template-columns: 1fr;
-  column-gap: 5px;
-  row-gap: 5px;
+.box-title-songs {
+  grid-column: auto;
+  grid-row: auto;
+  border: 1px solid rgb(218, 218, 218);
   padding: 10px;
-  background-color: rgb(220, 220, 220);
+  background-color: rgb(12, 111, 250);
+  color: rgb(255, 255, 255);
+}
+
+.box-songs {
+  grid-column: auto;
+  grid-row: auto;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 10px;
+  background-color: rgb(241, 241, 241);
+}
+
+.box-list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  border: 0.1px solid grey;
+  margin: 10px;
+}
+
+.box-list-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 .box-2 {
@@ -25,7 +46,8 @@
 
 .box-3 {
   grid-column: 1fr;
-  border: 1px solid grey;
+  grid-template-rows: 1fr;
+  border: 1px solid rgb(255, 255, 255);
   padding: 50px;
   background-color: rgb(220, 220, 220);
 }
