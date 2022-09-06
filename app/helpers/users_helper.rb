@@ -6,7 +6,7 @@ module UsersHelper
         when "woman" then image_tag("woman.png", class: "img-avatar")
       end
     else
-      image_tag user.avatar.variant(:thumb)
+      image_tag user.avatar.variant(:thumb), class: "img-avatar"
     end
   end
   
