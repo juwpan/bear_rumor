@@ -14,11 +14,10 @@
 
     <div class="wrapper">
 
-      <header class="p-2 bg-color-header text-white mb-2">
-        <div class="container">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <div class="d-flex align-items-center me-5 mb-lg-0 text-white text-decoration-none fas fa-solid fa-music">
-            </div>
+      <header class="p-2 bg-color-header text-white fs-4 text">
+        <div class="container-fluid">
+          <div class="d-flex flex-wrap align-items-center justify-content-between justify-content-lg-between">
+              <%= link_to image_tag("logo.png", class: "logo-img"), root_path %>
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <li><%= link_to "Главная", root_path , class: "nav-link px-2 text-secondary" %></li>
               <li><%= link_to "Топ 100", root_path , class: "nav-link px-2 text-white" %></li>

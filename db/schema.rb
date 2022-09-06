@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_29_102257) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_06_042348) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,9 +42,24 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_29_102257) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "author_uniqs", force: :cascade do |t|
+  create_table "alphabet_uniqs", force: :cascade do |t|
     t.bigint "author_id", null: false
+    t.bigint "alphabet_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["alphabet_id"], name: "index_alphabet_uniqs_on_alphabet_id"
+    t.index ["author_id"], name: "index_alphabet_uniqs_on_author_id"
+  end
+
+  create_table "alphabets", force: :cascade do |t|
+    t.string "abc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "author_uniqs", force: :cascade do |t|
     t.bigint "song_id", null: false
+    t.bigint "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_author_uniqs_on_author_id"
@@ -55,6 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_29_102257) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "letter"
   end
 
   create_table "songs", force: :cascade do |t|
@@ -90,6 +106,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_29_102257) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "alphabet_uniqs", "alphabets"
+  add_foreign_key "alphabet_uniqs", "authors"
   add_foreign_key "author_uniqs", "authors"
   add_foreign_key "author_uniqs", "songs"
   add_foreign_key "songs", "users"

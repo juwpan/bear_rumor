@@ -2,7 +2,6 @@ class SongsController < ApplicationController
   before_action :params_song, only: %i[create update]
   before_action :set_song, only: %i[show]
 
-
   def new
     @song = Song.new
   end
@@ -29,6 +28,7 @@ class SongsController < ApplicationController
   def index
     @songs = Song.all
     @authors = Author.all
+    @alphabets = Alphabet.all
   end
 
   def destroy
@@ -37,7 +37,7 @@ class SongsController < ApplicationController
   private
 
   def params_song
-    params.require(:song).permit(:title, :body, :name_author, :user_id, :author_id)
+    params.require(:song).permit(:title, :body, :name_author, :user_id)
   end
 
   def set_song

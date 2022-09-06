@@ -1,23 +1,27 @@
 <div class="content-column">
+
   <div class="column-left m-3 text-center">
   <h2 class="title-registration"><%= "Последние добавленные" %></h2>
     <% @songs.each do |song| %>
-      <p><%= link_to "#{song.title}", song_path(song.id) %></p>
+      <p><%= link_to "#{song.title}", song_path(song) %></p>
     <% end %>
   </div>
 
-  <div class="column-center">
-    Центр
+  <div>
+  <div class="column-center m-2">
+    <% @alphabets.each do |letter| %>
+      <em><%= link_to letter.abc, alphabet_path(letter), class: "color-blue" %></em>
+    <% end %>
+  </div>
   </div>
 
   <div class="column-right m-3 text-center">
   <h2 class="title-registration"><%= "По авторам" %></h2>
     <% @authors.each do |author|%>
     <% unless author.songs.blank? %>
-      <%= link_to author.name, author_path(author.id) %>
+      <%= link_to author.name, author_path(author) %>
     <% end %>
   <% end %>
   </div>
-</div>
 
-<%# <%= link_to "Create", new_song_path, class: "btn btn-primary" %>
+</div>

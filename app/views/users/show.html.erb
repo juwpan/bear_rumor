@@ -1,53 +1,85 @@
-
-<div class="title-registration me-3 ms-3">
+<%# <div class="title-registration me-3 ms-3">
   Личный кабинет
-</div>
-
+</div> %>
 <div class="container-profile">
-
-    <div class="column-left-profile">
-
-      <div class="box-1">
-        <%= user_avatar(@user)  %>
-      </div>
-
-      <div class="box-1-1">
-
-        <div>
-          <%= link_to "Edit", edit_user_registration_path, class: "btn btn-dark size-btn" %>
-        </div>
-
-        <%= form_with model: @user do |f| %>
-
-          <div><%= f.label :avatar, class: "btn btn-secondary size-btn" %></div>
-          <div><%= f.file_field :avatar, class: "no-display" %></div>
-
-          <div>
-            <%= f.submit "Save", class: "btn btn-light mt-2 size-btn", data: { turbo: false } %>
-          </div>    
-        <% end %>
-      
-      </div>
-
-      <div class="box-2">
-        <div class="fs-4 text">Name: <%= @user.name %></div>
-
-        <div class="fs-4 text">NickName: <%= @user.nickname %></div>
-
-        <%# # Подтверждена почта или нет реализовать%>
-        <div class="fs-4 text">Email: <%= @user.email %></div>
-      </div>
-
-      <div class="box-3">
-        Онлайн или нет
-      </div>
-      
+  <div class="column-left-profile">
+    <div class="box-1 d-flex justify-content-center">
+      <%= link_to user_avatar(@user), edit_user_registration_path %>
     </div>
-
-    <div class="column-right-profile">
-
-      <div><%= link_to "Добавить песню", new_song_path, class: "btn btn-dark bi bi-music-note" %></div>
-
+    <div class="box-1 d-grid gap-2 p-4">
+      <button type="button" class="btn btn-primary position-relative">
+        Мои сообщения
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          <%= 15 %>
+          <span class="visually-hidden">непрочитанные сообщения</span>
+        </span>
+      </button>
     </div>
+    <div class="box-1 d-grid gap-2 p-4">
+      <button type="button" class="btn btn-primary position-relative">
+        Мои сообщения
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          <%= 15 %>
+          <span class="visually-hidden">непрочитанные сообщения</span>
+        </span>
+      </button>
+    </div>
+    <div class="box-1 d-grid gap-2 p-4">
+      <button type="button" class="btn btn-primary position-relative">
+        Мои аккорды
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          <%= @user.songs.count %>
+          <span class="visually-hidden">непрочитанные сообщения</span>
+        </span>
+      </button>
+    </div>
+    <div class="box-1 d-grid gap-2 p-4">
+      <button type="button" class="btn btn-primary position-relative">
+        Мои списки
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          <%= @user.songs.count %>
+          <span class="visually-hidden">непрочитанные сообщения</span>
+        </span>
+      </button>
+    </div>
+    <div class="box-1 d-grid gap-2 p-4">
+      <button type="button" class="btn btn-primary position-relative">
+        Мои задачи
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          <%= @user.songs.count %>
+          <span class="visually-hidden">непрочитанные сообщения</span>
+        </span>
+      </button>
+    </div>
+    <div class="box-1 d-grid gap-2 p-5">
+    </div>
+  </div>
 
+  <div class="column-center-profile">
+    <div class="column-center m-2">
+      <%= render "users/songs" %>
+    </div>
+    
+    <p><%= link_to "Добавить песню", new_song_path, class: "btn btn-dark bi bi-music-note" %></p>
+
+    
+    <div>
+      <button type="button" class="btn btn-primary position-relative">
+        Ваш список добавленных
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          <%= @user.songs.count %>
+          <span class="visually-hidden">непрочитанные сообщения</span>
+        </span>
+      </button>
+    </div>
+    <div><%= link_to "Добавить песню", new_song_path, class: "btn btn-dark bi bi-music-note" %></div>
+  </div>
+
+  <div class="column-right-profile">
+    <div class="box-title-songs d-flex justify-content-center text-center  fs-4 text">Последние добавленные</div>
+    <div class="box-songs text-center">
+      <%= render "users/songs" %>
+    </div>
+  </div>
+</div>
 </div>

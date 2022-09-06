@@ -3,12 +3,13 @@ class AuthorsController < ApplicationController
 
   def index
     @authors = Author.all
+    @alphabets = Alphabet.all
   end
 
   def show
   end
 
-  # private
+  private
 
   def set_author
     @author = Author.find(params[:id])

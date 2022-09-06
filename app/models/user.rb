@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_many :songs, dependent: :destroy
   
   has_one_attached :avatar do |attachable|
-    attachable.variant :thumb, resize_to_fill: [350, 300]
+    attachable.variant :thumb, resize_to_fill: [100, 100]
   end
 
   devise :database_authenticatable, :registerable,

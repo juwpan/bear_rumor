@@ -1,10 +1,11 @@
-<%= form_with url: results_path do |f| %>
-<% end %>
+<div class="no-display">
+  <%= form_with url: results_path do |f| %>
+  <% end %>
+</div>
 
 <div class="me-3">
   <%= form_with url: results_path, method: :get do |form| %>
-    <%= form.label :query, "Search for:" %>
+    <%= form.submit "Поиск",  data: { turbo: false } %>
     <%= form.text_field :query %>
-    <%= form.submit "Search", data: { turbo: false } %>
   <% end %>
 </div>

@@ -1,3 +1,5 @@
-<div>
-  <%= render template: "authors/show" %>
-</div>
+<% @authors.each do |author| %>
+  <div><%= author.name %></div>
+<% end %>
+
+<%= @abc %>
