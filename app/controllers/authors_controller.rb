@@ -3,6 +3,7 @@ class AuthorsController < ApplicationController
 
   def index
     @authors = Author.all
+    @songs = Song.all
     @alphabets = Alphabet.all
   end
 

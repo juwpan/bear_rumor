@@ -34,6 +34,10 @@ class SongsController < ApplicationController
   def destroy
   end
 
+  def song_all
+    @songs = Song.all
+  end
+
   private
 
   def params_song
