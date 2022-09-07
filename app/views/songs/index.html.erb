@@ -1,13 +1,21 @@
 <div class="content-column">
 
-  <div class="column-left m-3 text-center">
-  <h2 class="title-registration"><%= "Последние добавленные" %></h2>
+  <div class="column-left text-center">
+  <p class="title-add fs-5 text"><%= "Последние добавленные" %></p>
     <% @songs.each do |song| %>
       <p><%= link_to "#{song.title}", song_path(song) %></p>
     <% end %>
   </div>
 
   <div>
+    <div class="column-center-one m-2 text-list-home">
+      <p class="m-0"> <%= link_to "Все", song_all_path %></p>
+      <p class="m-0"> <%= link_to "Популярные" %></p>
+      <p class="m-0"> <%= link_to "По жанрам" %></p>
+      <p class="m-0"> <%= link_to "По исполнителям", authors_path %> </p>
+      <p class="m-0"> <%= link_to "Добавить" %> </p>
+      <p class="m-0"><%= link_to "Изучение" %></p>
+    </div>
   <div class="column-center m-2">
     <% @alphabets.each do |letter| %>
       <em><%= link_to letter.abc, alphabet_path(letter), class: "color-blue" %></em>
@@ -15,8 +23,8 @@
   </div>
   </div>
 
-  <div class="column-right m-3 text-center">
-  <h2 class="title-registration"><%= "По авторам" %></h2>
+  <div class="column-right text-center">
+  <p class="title-add fs-5 text"><%= "По авторам" %></p>
     <% @authors.each do |author|%>
     <% unless author.songs.blank? %>
       <%= link_to author.name, author_path(author) %>

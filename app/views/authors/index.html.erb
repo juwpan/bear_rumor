@@ -1,5 +1,15 @@
+<div class="title-registration text-center fs-4 text mt-1">
+  <p>Все исполнители</p>
+</div>
+
+<div class="column-center-one m-2 text-list-home">
 <% @authors.each do |author| %>
-  <div><%= author.name %></div>
+  <div><%= link_to author.name, author_path(author) %></div>
 <% end %>
 
 <%= @abc %>
+</div>
+
+<div>
+  <p class="title-add text-center fs-6 text m-0"><%= link_to "Назад", :back, class: "text-white-back" %></p>
+</div>

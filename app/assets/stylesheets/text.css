@@ -5,6 +5,24 @@
   color: rgb(255, 255, 255);
 }
 
+.title-add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-size: black;
+  border-bottom: 1px solid black;
+  background-color: rgb(56, 56, 56);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.text-list-home {
+  list-style-type: none;
+  color: #000;
+  font-size: 15px;
+}
+
 .title-registration {
   text-align: center;
   background-size: black;
