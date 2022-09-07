@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug 23 01:28:54 2022
+# Make data base, printed on Wed Sep  7 09:04:01 2022
 
 # Variables
 
@@ -45,11 +45,11 @@ CURDIR := /home/juwpan/Work/bear_rumor
 # environment
 RBENV_SHELL = bash
 # environment
-SNAP_DATA = /var/snap/code/105
+SNAP_DATA = /var/snap/code/106
 # environment
-VSCODE_NLS_CONFIG = {"locale":"ru","availableLanguages":{"*":"ru"},"_languagePackId":"e2673fac9b3b0beb38d486c37331d2f9.ru","_translationsConfigFile":"/home/juwpan/.config/Code/clp/e2673fac9b3b0beb38d486c37331d2f9.ru/tcf.json","_cacheRoot":"/home/juwpan/.config/Code/clp/e2673fac9b3b0beb38d486c37331d2f9.ru","_resolvedLanguagePackCoreLocation":"/home/juwpan/.config/Code/clp/e2673fac9b3b0beb38d486c37331d2f9.ru/e4503b30fc78200f846c62cf8091b76ff5547662","_corruptedFile":"/home/juwpan/.config/Code/clp/e2673fac9b3b0beb38d486c37331d2f9.ru/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"ru","availableLanguages":{"*":"ru"},"_languagePackId":"25fa6f3e61adfb2ba590c4cdbc3737bc.ru","_translationsConfigFile":"/home/juwpan/.config/Code/clp/25fa6f3e61adfb2ba590c4cdbc3737bc.ru/tcf.json","_cacheRoot":"/home/juwpan/.config/Code/clp/25fa6f3e61adfb2ba590c4cdbc3737bc.ru","_resolvedLanguagePackCoreLocation":"/home/juwpan/.config/Code/clp/25fa6f3e61adfb2ba590c4cdbc3737bc.ru/784b0177c56c607789f9638da7b6bf3230d47a8c","_corruptedFile":"/home/juwpan/.config/Code/clp/25fa6f3e61adfb2ba590c4cdbc3737bc.ru/corrupted.info","_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:34603
+JOURNAL_STREAM = 8:33762
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -69,15 +69,15 @@ XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/d
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
-_ = /snap/code/105/usr/share/code/code
+_ = /snap/code/106/usr/share/code/code
 # environment
-MANAGERPID = 1338
+MANAGERPID = 1229
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 VSCODE_CWD = /home/juwpan
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/105/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/106/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -85,25 +85,23 @@ PATH = /home/juwpan/.rbenv/shims:/home/juwpan/.rbenv/bin:/usr/local/sbin:/usr/lo
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/juwpan-VirtualBox:@/tmp/.ICE-unix/1635,unix/juwpan-VirtualBox:/tmp/.ICE-unix/1635
+SESSION_MANAGER = local/juwpan-VirtualBox:@/tmp/.ICE-unix/1530,unix/juwpan-VirtualBox:/tmp/.ICE-unix/1530
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/juwpan/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/105
+SNAP = /snap/code/106
 # environment
-SNAP_VERSION = e4503b30
+SNAP_VERSION = 784b0177
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
-DISABLE_WAYLAND = 1
-# environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 712e6b6a058348d5bd3f9ebd9f95af2c
+INVOCATION_ID = a91335afce6343939aa3958b4a14d36b
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/105/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/106/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -113,7 +111,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 4151
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2081
 # automatic
 %F = $(notdir $%)
 # environment
@@ -125,7 +123,7 @@ PWD = /home/juwpan/Work/bear_rumor
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1581
+SSH_AGENT_PID = 1481
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -139,11 +137,11 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/juwpan/.config/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
+VSCODE_CODE_CACHE_PATH = /home/juwpan/.config/Code/CachedData/784b0177c56c607789f9638da7b6bf3230d47a8c
 # environment
 LOGNAME = juwpan
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # environment
@@ -169,7 +167,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
-SNAP_USER_DATA = /home/juwpan/snap/code/105
+SNAP_USER_DATA = /home/juwpan/snap/code/106
 # environment
 SHLVL = 0
 # environment
@@ -179,7 +177,7 @@ MAKE_VERSION := 4.2.1
 # environment
 USER = juwpan
 # environment
-SNAP_REVISION = 105
+SNAP_REVISION = 106
 # makefile
 .DEFAULT_GOAL := dbm
 # environment
@@ -193,7 +191,7 @@ MAKE_COMMAND := make
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-1158cebf-1.70.2-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-1158cebf-1.71.0-main.sock
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile
@@ -243,9 +241,9 @@ GJS_DEBUG_OUTPUT = stderr
 # environment
 LANG = C
 # environment
-VSCODE_PID = 4198
+VSCODE_PID = 2257
 # variable set hash-table stats:
-# Load=116/1024=11%, Rehash=0, Collisions=19/141=13%
+# Load=115/1024=11%, Rehash=0, Collisions=19/140=14%
 
 # Pattern-specific Variable Values
 
@@ -253,15 +251,22 @@ VSCODE_PID = 4198
 
 # Directories
 
-# . (device 2053, inode 3809529): 30 files, no impossibilities.
+# . (device 2053, inode 3809529): 33 files, no impossibilities.
 
-# 30 files, no impossibilities in 1 directories.
+# 33 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
+
+b:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 13):
+	bundle install
 
 # Not a target:
 all:
@@ -273,16 +278,16 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-22 15:21:25.73146799
+#  Last modified 2022-08-31 12:57:49.749811031
 #  File has been updated.
+ 
 #  Successfully updated.
 
 test:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 13):
+#  recipe to execute (from 'Makefile', line 18):
 	bundle exec rspec
 
 dbm-test:
@@ -313,19 +318,19 @@ dbr:
 	bundle exec rails db:rollback
 
 # files hash-table stats:
-# Load=8/1024=1%, Rehash=0, Collisions=0/18=0%
+# Load=9/1024=1%, Rehash=0, Collisions=0/19=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 39 / storage = 321 B / avg = 8 B
-# current buf: size = 8162 B / used = 321 B / count = 39 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 43 / storage = 357 B / avg = 8 B
+# current buf: size = 8162 B / used = 357 B / count = 43 / avg = 8 B
 
-# strcache performance: lookups = 47 / hit rate = 17%
+# strcache performance: lookups = 52 / hit rate = 17%
 # hash-table stats:
-# Load=39/8192=0%, Rehash=0, Collisions=1/47=2%
-# Finished Make data base on Tue Aug 23 01:28:54 2022
+# Load=43/8192=1%, Rehash=0, Collisions=1/52=2%
+# Finished Make data base on Wed Sep  7 09:04:01 2022
 
  
