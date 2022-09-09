@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, path: 'devise'
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth' }
   
   resources :authors, :alphabets, :songs, :users
 

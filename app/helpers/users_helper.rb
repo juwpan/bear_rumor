@@ -1,9 +1,10 @@
 module UsersHelper
   def user_avatar(user)
     unless user.avatar.attached?
-      case user.gender
-        when "man" then image_tag("nouser.png", class: "img-avatar")
-        when "woman" then image_tag("woman.png", class: "img-avatar")
+      case user.gender.first
+        when "м" then image_tag("nouser.png", class: "img-avatar")
+        when "ж" then image_tag("woman.png", class: "img-avatar")
+        when "т" then image_tag("bear_roumor.png", class: "img-avatar")
       end
     else
       image_tag user.avatar.variant(:thumb), class: "img-avatar"

@@ -24,6 +24,11 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 gem 'devise', "~> 4.8.1"
 gem "pundit", "~> 2.2.0"
+
+# OmniAuth
+gem 'omniauth', "~> 2.1.0"
+gem 'omniauth-google-oauth2', "~> 1.1.1"
+
 # gem "sassc-rails"
 
 gem "pg_search", "~> 2.3.6"
