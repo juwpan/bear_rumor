@@ -1,6 +1,6 @@
 class SongsController < ApplicationController
   before_action :params_song, only: %i[create update]
-  before_action :set_song, only: %i[show]
+  before_action :set_song, only: %i[show update edit]
 
   def new
     @song = Song.new
@@ -20,6 +20,11 @@ class SongsController < ApplicationController
   end
 
   def update
+    if @song.update(params_song)
+      redirect_to user_song_all_path, notice: "Песня обновлена"
+    else
+      render :edit, alert: "Обновление не удалось"
+    end
   end
 
   def show
@@ -38,10 +43,15 @@ class SongsController < ApplicationController
     @songs = Song.all
   end
 
+
+  def user_song_all
+    @songs = Song.all
+  end
+
   private
 
   def params_song
-    params.require(:song).permit(:title, :body, :name_author, :user_id)
+    params.require(:song).permit(:title, :body, :name_author, :teach, :user_id)
   end
 
   def set_song

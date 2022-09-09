@@ -23,6 +23,7 @@ class UsersController < ApplicationController
 
   def index
     @songs = Song.all
+    @users = User.all
   end
 
   def destroy
@@ -30,7 +31,6 @@ class UsersController < ApplicationController
 
     redirect_to root_path, alert: "Пользователь удалён"
   end
-
 
   private
 

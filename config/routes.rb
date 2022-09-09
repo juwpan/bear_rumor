@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, path: 'devise'
   
-  resources :users, :authors, :alphabets, :songs
+  resources :authors, :alphabets, :songs, :users
 
   get 'song_all', action: :song_all, controller: 'songs'
+  get 'user_song_all', action: :user_song_all, controller: 'songs'
 
   root "songs#index"
 
