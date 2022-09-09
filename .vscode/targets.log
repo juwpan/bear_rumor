@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Sep  7 09:04:01 2022
+# Make data base, printed on Fri Sep  9 09:59:59 2022
 
 # Variables
 
@@ -47,9 +47,9 @@ RBENV_SHELL = bash
 # environment
 SNAP_DATA = /var/snap/code/106
 # environment
-VSCODE_NLS_CONFIG = {"locale":"ru","availableLanguages":{"*":"ru"},"_languagePackId":"25fa6f3e61adfb2ba590c4cdbc3737bc.ru","_translationsConfigFile":"/home/juwpan/.config/Code/clp/25fa6f3e61adfb2ba590c4cdbc3737bc.ru/tcf.json","_cacheRoot":"/home/juwpan/.config/Code/clp/25fa6f3e61adfb2ba590c4cdbc3737bc.ru","_resolvedLanguagePackCoreLocation":"/home/juwpan/.config/Code/clp/25fa6f3e61adfb2ba590c4cdbc3737bc.ru/784b0177c56c607789f9638da7b6bf3230d47a8c","_corruptedFile":"/home/juwpan/.config/Code/clp/25fa6f3e61adfb2ba590c4cdbc3737bc.ru/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"ru","availableLanguages":{"*":"ru"},"_languagePackId":"3336b4f881aefc9e2340c398e06e2a31.ru","_translationsConfigFile":"/home/juwpan/.config/Code/clp/3336b4f881aefc9e2340c398e06e2a31.ru/tcf.json","_cacheRoot":"/home/juwpan/.config/Code/clp/3336b4f881aefc9e2340c398e06e2a31.ru","_resolvedLanguagePackCoreLocation":"/home/juwpan/.config/Code/clp/3336b4f881aefc9e2340c398e06e2a31.ru/784b0177c56c607789f9638da7b6bf3230d47a8c","_corruptedFile":"/home/juwpan/.config/Code/clp/3336b4f881aefc9e2340c398e06e2a31.ru/corrupted.info","_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:33762
+JOURNAL_STREAM = 8:32537
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -71,7 +71,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 _ = /snap/code/106/usr/share/code/code
 # environment
-MANAGERPID = 1229
+MANAGERPID = 1116
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -85,7 +85,7 @@ PATH = /home/juwpan/.rbenv/shims:/home/juwpan/.rbenv/bin:/usr/local/sbin:/usr/lo
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/juwpan-VirtualBox:@/tmp/.ICE-unix/1530,unix/juwpan-VirtualBox:/tmp/.ICE-unix/1530
+SESSION_MANAGER = local/juwpan-VirtualBox:@/tmp/.ICE-unix/1417,unix/juwpan-VirtualBox:/tmp/.ICE-unix/1417
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -99,7 +99,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = a91335afce6343939aa3958b4a14d36b
+INVOCATION_ID = 8ae1092efff241a8b0cbd2289c1081a4
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/106/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -111,7 +111,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2081
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2249
 # automatic
 %F = $(notdir $%)
 # environment
@@ -123,7 +123,7 @@ PWD = /home/juwpan/Work/bear_rumor
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1481
+SSH_AGENT_PID = 1351
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -241,7 +241,7 @@ GJS_DEBUG_OUTPUT = stderr
 # environment
 LANG = C
 # environment
-VSCODE_PID = 2257
+VSCODE_PID = 2421
 # variable set hash-table stats:
 # Load=115/1024=11%, Rehash=0, Collisions=19/140=14%
 
@@ -278,9 +278,9 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2022-08-31 12:57:49.749811031
 #  File has been updated.
- 
 #  Successfully updated.
 
 test:
@@ -331,6 +331,6 @@ dbr:
 # strcache performance: lookups = 52 / hit rate = 17%
 # hash-table stats:
 # Load=43/8192=1%, Rehash=0, Collisions=1/52=2%
-# Finished Make data base on Wed Sep  7 09:04:01 2022
+# Finished Make data base on Fri Sep  9 09:59:59 2022
 
  

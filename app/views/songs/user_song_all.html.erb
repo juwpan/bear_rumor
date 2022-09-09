@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <div class="title-add text-center fs-4 text mt-1">
+        Ваши добавленные аккорды
+      </div>
+
+      <div class="row">
+        <div class="btn-group">
+          <button class="btn btn-success m-1" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Знаю</button>
+          <button class="btn btn-warning m-1" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Учу</button>
+          <button class="btn btn-primary m-1" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Архив</button>
+          <button class="btn btn-primary m-1" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">Весь список</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <% @songs.each do |song| %>
+            <% if song.teach == "знаю" %>
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                  <p class="m-1 collapse" id="multiCollapseExample1">
+                  <%= link_to song.title, song_path(song) %>
+                  <%= link_to icon("pencil-fill"), edit_song_path(song) %>
+                  <%= link_to icon("trash-fill")%>
+                  <%= icon("check-circle-fill")%></p>
+              </div>
+            </div>
+          </div>
+        <% elsif song.teach == "буду учить" %>
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+              <div class="card card-body">
+                <p class="m-1 collapse" id="multiCollapseExample2">
+                  <%= link_to song.title, song_path(song) %>
+                  <%= link_to icon("pencil-fill"), edit_song_path(song) %>
+                  <%= link_to icon("trash-fill")%></p>
+              </div>
+            </div>
+          </div>
+          <% elsif song.teach == "в архив" %>
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample3">
+              <div class="card card-body">
+                <p class="m-1 collapse" id="multiCollapseExample3">
+                  <%= link_to song.title, song_path(song) %>
+                  <%= link_to icon("pencil-fill"), edit_song_path(song) %>
+                  <%= link_to icon("trash-fill")%>
+                  <%= link_to icon("archive-fill") %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample4">
+              <div class="card card-body">
+                <p class="m-1 collapse" id="multiCollapseExample4">
+                  <%= link_to song.title, song_path(song) %>
+                  <%= link_to icon("pencil-fill"), edit_song_path(song) %>
+                  <%= link_to icon("trash-fill")%>
+                  <%= choice_status(song) %></p>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>

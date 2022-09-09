@@ -1,6 +1,3 @@
-<%# <div class="title-registration me-3 ms-3">
-  Личный кабинет
-</div> %>
 <div class="container-profile">
   <div class="column-left-profile">
     <div class="box-1 d-flex justify-content-center">
@@ -15,24 +12,16 @@
         </span>
       </button>
     </div>
+
     <div class="box-1 d-grid gap-2 p-4">
-      <button type="button" class="btn btn-primary position-relative">
-        Мои сообщения
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          <%= 15 %>
-          <span class="visually-hidden">непрочитанные сообщения</span>
-        </span>
-      </button>
+      <%= link_to user_song_all_path, class: 'btn btn-primary position-relative' do %>
+          Мои аккорды
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            <%= @user.songs.count %>
+          </span>
+      <% end %>
     </div>
-    <div class="box-1 d-grid gap-2 p-4">
-      <button type="button" class="btn btn-primary position-relative">
-        Мои аккорды
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          <%= @user.songs.count %>
-          <span class="visually-hidden">непрочитанные сообщения</span>
-        </span>
-      </button>
-    </div>
+
     <div class="box-1 d-grid gap-2 p-4">
       <button type="button" class="btn btn-primary position-relative">
         Мои списки
@@ -72,7 +61,6 @@
         </span>
       </button>
     </div>
-    <div><%= link_to "Добавить песню", new_song_path, class: "btn btn-dark bi bi-music-note" %></div>
   </div>
 
   <div class="column-right-profile">
