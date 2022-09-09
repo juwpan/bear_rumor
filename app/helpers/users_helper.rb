@@ -4,7 +4,7 @@ module UsersHelper
       case user.gender.first
         when "м" then image_tag("nouser.png", class: "img-avatar")
         when "ж" then image_tag("woman.png", class: "img-avatar")
-        when "т" then image_tag("bear_roumor.png", class: "img-avatar")
+        when "н" then image_tag("bear_roumor.png", class: "img-avatar")
       end
     else
       image_tag user.avatar.variant(:thumb), class: "img-avatar"

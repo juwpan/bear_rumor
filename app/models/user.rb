@@ -14,6 +14,8 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: [:google_oauth2]
 
   before_create :capitalize
+  before_create :gender_choice
+  # after_update :gender_choice
 
   validates :name, presence: true, length: { maximum: 350 }
   validates :birth_date, presence: true
@@ -25,27 +27,30 @@ class User < ApplicationRecord
     name.capitalize!
   end
 
+  def gender_choice
+    self.gender = "не указан" if self.gender == "не важно"
+  end
+
   def self.create_from_provider_data(provider_data)
-    # Достаём email из токена
     email = provider_data.info.email
     user = where(email: email).first
 
-    # Возвращаем, если нашёлся
     return user if user.present?
 
-    # Если не нашёлся, достаём провайдера, айдишник и uid
     provider = provider_data.provider
     id = provider_data.extra.raw_info.id
     uid = id
 
-    # Теперь ищем в базе запись по провайдеру и uid
-    # Если есть, то вернётся, если нет, то будет создана новая
     where(uid: uid, provider: provider).first_or_create! do |user|
-      # Если создаём новую запись, прописываем email и пароль
       user.name = provider_data.info.name
       user.nickname = "Ордынский Вепрь_#{rand(999)}"
-      user.birth_date = Time.now
+      user.birth_date = provider_data.info.birth_date
       user.gender = provider_data.info.gender
+      # if provider_data.info.gender.present?
+      #   user.gender = provider_data.info.gender
+      # else
+      #   user.gender = "Троепол"
+      # end
 
       user.avatar.attach(io: URI.open(provider_data.info.image), filename: 'avatar')
       
