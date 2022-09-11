@@ -8,6 +8,8 @@
   </div>
 
   <div>
+
+  <% if false %>
     <div class="column-center-one m-2 text-list-home">
       <p class="m-0"> <%= link_to "Все", song_all_path %></p>
       <p class="m-0"> <%= link_to "Популярные" %></p>
@@ -16,6 +18,8 @@
       <p class="m-0"> <%= link_to "Добавить" %> </p>
       <p class="m-0"><%= link_to "Изучение" %></p>
     </div>
+  <% end %>
+
   <div class="column-center m-2">
     <% @alphabets.each do |letter| %>
       <em><%= link_to letter.abc, alphabet_path(letter), class: "color-blue" %></em>

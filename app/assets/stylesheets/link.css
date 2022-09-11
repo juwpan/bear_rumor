@@ -28,3 +28,16 @@ a.fas.fa-solid.fa-house {
   color: #000;
   text-decoration: none;
 }
+
+.a-white {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.a-white:hover {
+  border: white;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: aliceblue;
+  color: #000;
+}
