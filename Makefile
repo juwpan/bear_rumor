@@ -10,7 +10,6 @@ dbm-test:
 # bundle install
 
 # heroku BD
-
 h-dbm:
 	heroku run rake db:migrate
 

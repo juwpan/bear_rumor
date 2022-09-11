@@ -15,7 +15,6 @@ class User < ApplicationRecord
 
   before_create :capitalize
   before_create :gender_choice
-  # after_update :gender_choice
 
   validates :name, presence: true, length: { maximum: 350 }
   validates :birth_date, presence: true
@@ -46,11 +45,6 @@ class User < ApplicationRecord
       user.nickname = "Ордынский Вепрь_#{rand(999)}"
       user.birth_date = provider_data.info.birth_date
       user.gender = provider_data.info.gender
-      # if provider_data.info.gender.present?
-      #   user.gender = provider_data.info.gender
-      # else
-      #   user.gender = "Троепол"
-      # end
 
       user.avatar.attach(io: URI.open(provider_data.info.image), filename: 'avatar')
       

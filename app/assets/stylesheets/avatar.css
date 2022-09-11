@@ -13,3 +13,14 @@
   width: 160px;
   height: 70px;
 }
+
+.omni-img {
+  width: 40px;
+  height: 30px;
+  filter: grayscale(1);
+  transition: 1s;
+}
+
+.omni-img:hover {
+  filter: grayscale(0);
+}
