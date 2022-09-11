@@ -1,39 +1,38 @@
-<div class="content-column">
-
-  <div class="column-left text-center">
-  <p class="title-add fs-5 text"><%= "Последние добавленные" %></p>
-    <% @songs.each do |song| %>
-      <p><%= link_to "#{song.title}", song_path(song) %></p>
-    <% end %>
-  </div>
-
-  <div>
-
-  <% if false %>
-    <div class="column-center-one m-2 text-list-home">
-      <p class="m-0"> <%= link_to "Все", song_all_path %></p>
-      <p class="m-0"> <%= link_to "Популярные" %></p>
-      <p class="m-0"> <%= link_to "По жанрам" %></p>
-      <p class="m-0"> <%= link_to "По исполнителям", authors_path %> </p>
-      <p class="m-0"> <%= link_to "Добавить" %> </p>
-      <p class="m-0"><%= link_to "Изучение" %></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col text-center border-end border-bottom">
+      <p class="title-add fs-6 text "><%= "Последние добавленные" %></p>
+      <% @songs.each do |song| %>
+        <p><%= link_to "#{song.title}", song_path(song) %></p>
+      <% end %>
     </div>
-  <% end %>
 
-  <div class="column-center m-2">
-    <% @alphabets.each do |letter| %>
-      <em><%= link_to letter.abc, alphabet_path(letter), class: "color-blue" %></em>
-    <% end %>
-  </div>
-  </div>
+    <div class="col-7">
+      <% if false %>
+        <div class="column-center-one m-2 text-list-home">
+          <p class="m-0"> <%= link_to "Все", song_all_path %></p>
+          <p class="m-0"> <%= link_to "Популярные" %></p>
+          <p class="m-0"> <%= link_to "По жанрам" %></p>
+          <p class="m-0"> <%= link_to "По исполнителям", authors_path %> </p>
+          <p class="m-0"> <%= link_to "Добавить" %> </p>
+          <p class="m-0"><%= link_to "Изучение" %></p>
+        </div>
+      <% end %>
+      <p class="p-1 m-0 bg-secondary text-white text-center">Исполнители</p>
+      <div class="column-center m-0">
+        <% @alphabets.each do |letter| %>
+          <em><%= link_to letter.abc, alphabet_path(letter), class: "color-blue" %></em>
+        <% end %>
+      </div>
+    </div>
 
-  <div class="column-right text-center">
-  <p class="title-add fs-5 text"><%= "По авторам" %></p>
-    <% @authors.each do |author|%>
-    <% unless author.songs.blank? %>
-      <%= link_to author.name, author_path(author) %>
-    <% end %>
-  <% end %>
+    <div class="col text-center border-bottom border-start">
+      <p class="title-add fs-6 text-center"><%= "По авторам" %></p>
+      <% @authors.each do |author|%>
+        <% unless author.songs.blank? %>
+          <p><%= link_to author.name, author_path(author) %></p>
+        <% end %>
+      <% end %>
+    </div>
   </div>
-
 </div>

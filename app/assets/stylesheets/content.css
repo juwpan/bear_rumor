@@ -18,6 +18,15 @@ body {
 
 }
 
+.border,
+.border-end,
+.border-right,
+.border-left,
+.border-bottom {
+  margin: 0px;
+  padding: 0px;
+}
+
 .main {
   flex: 1 1 auto;
 }
