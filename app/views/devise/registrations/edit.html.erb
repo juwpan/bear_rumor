@@ -47,6 +47,18 @@
           <%= f.password_field :current_password, autocomplete: "off", class: 'form-edit' %>
         </div>
       </div>
+
+      <div class="field mt-2">
+        <%= f.label :birth_date %>
+        <div>
+          <%= f.date_select(:birth_date,
+                    include_blank: false,
+                    selected: Date.today,
+                    start_year: Date.today.year - 100,
+                    end_year: Date.today.year - 0 ) %>
+        </div>
+      </div>
+      
       <div class="form-group mb-3">
         <%= f.label :gender, class: 'col-sm-2 control-label'  %>
         <div class="col-sm-12">

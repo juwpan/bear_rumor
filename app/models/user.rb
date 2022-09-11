@@ -32,7 +32,8 @@ class User < ApplicationRecord
 
   def self.create_from_provider_data(provider_data)
     email = provider_data.info.email
-    user = where(email: email).first
+
+    user = User.where(email: email).first
 
     return user if user.present?
 
@@ -41,16 +42,22 @@ class User < ApplicationRecord
     uid = id
 
     where(uid: uid, provider: provider).first_or_create! do |user|
+      debugger
       user.name = provider_data.info.name
       user.nickname = "Ордынский Вепрь_#{rand(999)}"
 
-      user.birth_date = Time.now
+      if provider_data.info.birth_date.present?
+        user.birth_date =  provider_data.info.birth_date
+      else
+        user.birth_date = Time.now
+      end
 
       user.gender = "не указан"
 
       user.avatar.attach(io: URI.open(provider_data.info.image), filename: 'avatar')
       
       user.email = email
+
       user.password = Devise.friendly_token.first(16)
       user.confirmed_at = Time.now.utc
     end
