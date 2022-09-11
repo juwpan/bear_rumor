@@ -20,11 +20,11 @@
 
         <div class="text-end me-5">
           <% if user_signed_in? %>
-            <%= omni_auth(@user) %>
+            <%= render "layouts/omni" %>
             <%= link_to "Личный кабинет", current_user, data: { turbo: false },  class: "btn btn-light" %>
             <%= link_to "Выход", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "btn btn-secondary" %>
           <% else %>
-            <%= omni_auth(@user) %>
+            <%= render "layouts/omni" %>
             <%= link_to "Регистрация", new_user_registration_path,  class: "btn btn-light" %>
             <%= link_to "Вход", new_user_session_path,  class: "btn btn-secondary" %>
           <% end %>

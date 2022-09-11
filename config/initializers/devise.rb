@@ -274,9 +274,12 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   
-  config.omniauth :google_oauth2,
-    Rails.application.credentials.dig(:googleOmni, :client_id),
+  config.omniauth :google_oauth2, Rails.application.credentials.dig(:googleOmni, :client_id),
     Rails.application.credentials.dig(:googleOmni, :client_secret)
+
+  config.omniauth :mail_ru, Rails.application.credentials.dig(:mail, :mail_client_id),
+    Rails.application.credentials.dig(:mail, :mail_client_secret),
+    callback_url: Rails.application.credentials.dig(:mail, :callback_url)
 
   OmniAuth.config.allowed_request_methods = [:get]
   OmniAuth.config.silence_get_warning = true

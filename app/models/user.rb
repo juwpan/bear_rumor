@@ -11,7 +11,7 @@ class User < ApplicationRecord
          :rememberable, 
          :validatable,
          :confirmable, 
-         :omniauthable, omniauth_providers: [:google_oauth2]
+         :omniauthable, omniauth_providers: [:google_oauth2, :mail_ru]
 
   before_create :capitalize
   before_create :gender_choice
@@ -43,8 +43,10 @@ class User < ApplicationRecord
     where(uid: uid, provider: provider).first_or_create! do |user|
       user.name = provider_data.info.name
       user.nickname = "Ордынский Вепрь_#{rand(999)}"
-      user.birth_date = provider_data.info.birth_date
-      user.gender = provider_data.info.gender
+
+      user.birth_date = Time.now
+
+      user.gender = "не указан"
 
       user.avatar.attach(io: URI.open(provider_data.info.image), filename: 'avatar')
       

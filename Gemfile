@@ -28,6 +28,7 @@ gem "pundit", "~> 2.2.0"
 # OmniAuth
 gem 'omniauth', "~> 2.1.0"
 gem 'omniauth-google-oauth2', "~> 1.1.1"
+gem 'omniauth-mail_ru', "~> 1.2.0"
 
 # gem "sassc-rails"
 
