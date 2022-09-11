@@ -22,7 +22,7 @@
 
         <div class="text-end">
           <% if user_signed_in? %>
-            <%= omni_auth(user) %>
+            <%= omni_auth(@user) %>
             <%= link_to "Личный кабинет", current_user, data: { turbo: false },  class: "btn btn-light" %>
             <%= link_to "Выход", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "btn btn-secondary" %>
           <% else %>
