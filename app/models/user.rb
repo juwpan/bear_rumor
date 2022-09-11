@@ -42,7 +42,7 @@ class User < ApplicationRecord
     uid = id
 
     where(uid: uid, provider: provider).first_or_create! do |user|
-      debugger
+      # debugger
       user.name = provider_data.info.name
       user.nickname = "Ордынский Вепрь_#{rand(999)}"
 
