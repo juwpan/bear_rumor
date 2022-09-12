@@ -33,7 +33,7 @@ class User < ApplicationRecord
   def self.create_from_provider_data(provider_data)
     email = provider_data.info.email
 
-    user = User.where(email: email).first
+    user = where(email: email).first
 
     return user if user.present?
 
@@ -41,7 +41,7 @@ class User < ApplicationRecord
     id = provider_data.extra.raw_info.id
     uid = id
 
-    where(uid: uid, provider: provider).first_or_create! do |user|
+    where(uid: uid, provider: provider).create do |user|
       # debugger
       user.name = provider_data.info.name
       user.nickname = "Ордынский Вепрь_#{rand(999)}"
