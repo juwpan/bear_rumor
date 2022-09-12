@@ -16,12 +16,10 @@ class Users::OmniauthController < Devise::OmniauthCallbacksController
   def omniauth(kind)
     @user = User.create_from_provider_data(request.env['omniauth.auth'])
 
-    # debugger
-    
     if @user.persisted?
-      # @user.skip_confirmation!
-      sign_in_and_redirect @user, event: :authentication
       set_flash_message(:notice, :success, kind: kind) if is_navigational_format?
+
+      sign_in_and_redirect @user, event: :authentication
     else
       flash[:error] = I18n.t(
         'devise.omniauth_callbacks.failure',

@@ -3,10 +3,19 @@
     <div class="col text-center border-end border-bottom">
       <p class="title-add fs-6 text "><%= "Последние добавленные" %></p>
       <% @songs.each do |song| %>
-        <p><%= link_to "#{song.title}", song_path(song) %></p>
+        <p>
+          <%= link_to song.title, song_path(song), class: "m-4" %>
+          <% if current_user.present? %>
+            <%= link_to icon("pencil-fill"), edit_song_path(song) %>
+            <%= link_to icon("trash-fill"), song_path(song),
+                  data: { 
+                    turbo_method: "delete",
+                    turbo_confirm: "are_you_sure"
+                    } %>
+            <%= choice_status(song) %></p>
+        <% end %>
       <% end %>
     </div>
-
     <div class="col-7">
       <% if false %>
         <div class="column-center-one m-2 text-list-home">
@@ -25,7 +34,6 @@
         <% end %>
       </div>
     </div>
-
     <div class="col text-center border-bottom border-start">
       <p class="title-add fs-6 text-center"><%= "По авторам" %></p>
       <% @authors.each do |author|%>

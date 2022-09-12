@@ -87,3 +87,12 @@
   display: grid;
   grid-template-columns: repeat(2,1fr);
 }
+
+.title-songs {
+  text-align: center;
+  background-size: black;
+  border-bottom: 1px solid black;
+  background-color: rgb(34, 125, 189);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}

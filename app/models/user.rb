@@ -38,11 +38,12 @@ class User < ApplicationRecord
     return user if user.present?
 
     provider = provider_data.provider
+
     id = provider_data.extra.raw_info.id
+    
     uid = id
 
-    where(uid: uid, provider: provider).create do |user|
-      # debugger
+    where(uid: uid, provider: provider).create! do |user|
       user.name = provider_data.info.name
       user.nickname = "Ордынский Вепрь_#{rand(999)}"
 
