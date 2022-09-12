@@ -4,11 +4,11 @@
 <% end %>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-secondary"  %><br />
+  <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-secondary" %>
 <% end %>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+  <%= link_to "Forgot your password?", new_password_path(resource_name) %>
 <% end %>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
@@ -25,9 +25,9 @@
       <%- resource_class.omniauth_providers.each do |provider| %>
         <% case provider %>
         <% when :google_oauth2 %>
-          <div class="btn-indent"><%= link_to "image_tag('google1.png')", omniauth_authorize_path(resource_name, provider) %></div>
+          <%= link_to image_tag("google.png", class: "omni-img"), user_google_oauth2_omniauth_authorize_path %>
         <% when :mail_ru %>
-          <div class="btn-indent"><%= link_to "image_tag('mail1.png')", omniauth_authorize_path(resource_name, provider) %></div>
+          <%= link_to image_tag("mail.png", class: "omni-img me-4"), user_mail_ru_omniauth_authorize_path %>
         <% when :github %>
           <div class="btn-indent"><%= link_to "image_tag('git1.png')", omniauth_authorize_path(resource_name, provider) %></div>
         <% end  %>

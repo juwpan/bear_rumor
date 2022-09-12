@@ -1,5 +1,7 @@
-<div class="registraion-container">
+<div class="registraion-container m-5">
+
   <%= render "devise/shared/error_messages", resource: resource %>
+
   <div class="registration-form">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <h2 class="title-registration">Log in</h2>
@@ -17,6 +19,7 @@
           <%= f.label :remember_me %>
         </div>
       <% end %>
+      
       <div class="actions-field mt-3">
         <div><%= f.submit "Log in", class: "btn btn-dark", data: { turbo: false } %></div>
         <%= render "devise/shared/links" %>

@@ -45,8 +45,12 @@
           <p class="m-1 nav-link"><%= link_to "Все", song_all_path, class: "a-white" %></p>
           <p class="m-1 nav-link"><%= link_to "Популярные", root_path, class: "a-white"%></p>
           <p class="m-1 nav-link"><%= link_to "По жанрам", root_path, class: "a-white"%></p>
-          <p class="m-1 nav-link"><%= link_to "По исполнителям", authors_path, class: "a-white" %> </p>
-          <p class="m-1 nav-link"><%= link_to "Добавить", root_path, class: "a-white" %></p>
+          <p class="m-1 nav-link"><%= link_to "По исполнителям", authors_path, class: "a-white" %></p>
+          <% if current_user.present? %>
+            <p class="m-1 nav-link"><%= link_to "Добавить", new_song_path, class: "a-white" %></p>
+          <% else %>
+            <p class="m-1 nav-link"><%= link_to "Добавить", new_user_registration_path, class: "a-white" %></p>
+          <% end %>
           <p class="m-1 nav-link"><%= link_to "Изучение", root_path, class: "a-white" %></p>
         </div>
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">

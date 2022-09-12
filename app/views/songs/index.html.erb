@@ -2,19 +2,29 @@
   <div class="row">
     <div class="col text-center border-end border-bottom">
       <p class="title-add fs-6 text "><%= "Последние добавленные" %></p>
-      <% @songs.each do |song| %>
-        <p>
-          <%= link_to song.title, song_path(song), class: "m-4" %>
+      <div class="row">
+        <% @songs.each do |song| %>
+          <div class="col-7">
+            <% if song.teach == "в архив" %>
+              <p class=""><%= link_to song.title, song_path(song), class: "text-decoration-line-through" %></p>
+            <% else %>
+              <p class=""><%= link_to song.title, song_path(song), class: "text-decoration-none" %></p>
+            <% end %>
+          </div>
+
           <% if current_user.present? %>
+          <div class="col-5 text-start">
             <%= link_to icon("pencil-fill"), edit_song_path(song) %>
             <%= link_to icon("trash-fill"), song_path(song),
                   data: { 
                     turbo_method: "delete",
                     turbo_confirm: "are_you_sure"
                     } %>
-            <%= choice_status(song) %></p>
+            <%= choice_status(song) %>
+            </div>
         <% end %>
-      <% end %>
+        <% end %>
+      </div>
     </div>
     <div class="col-7">
       <% if false %>
@@ -27,8 +37,7 @@
           <p class="m-0"><%= link_to "Изучение" %></p>
         </div>
       <% end %>
-      <p class="p-1 m-0 bg-secondary text-white text-center">Исполнители</p>
-      <div class="column-center m-0">
+      <div class="column-center m-1">
         <% @alphabets.each do |letter| %>
           <em><%= link_to letter.abc, alphabet_path(letter), class: "color-blue" %></em>
         <% end %>

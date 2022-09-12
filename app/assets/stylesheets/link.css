@@ -53,3 +53,11 @@ a.fas.fa-solid.fa-house {
   background-color: aliceblue;
   color: #000;
 }
+
+a.text-decoration-none:hover {
+  border: white;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: burlywood;
+  color: #000;
+}

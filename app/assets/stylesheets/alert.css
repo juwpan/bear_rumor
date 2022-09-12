@@ -19,3 +19,9 @@
   display: grid;
   grid-template-columns: 1fr;
 }
+
+
+.c {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
