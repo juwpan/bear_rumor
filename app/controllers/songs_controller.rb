@@ -46,7 +46,6 @@ class SongsController < ApplicationController
     @songs = Song.all
   end
 
-
   def user_song_all
     @songs = Song.all
   end
