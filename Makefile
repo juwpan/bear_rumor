@@ -20,3 +20,11 @@ b:
 
 test:
 	bundle exec rspec
+
+# Yarn watch
+
+yarn-css:
+	yarn build:css --watch
+
+yarn:
+	yarn build --watch

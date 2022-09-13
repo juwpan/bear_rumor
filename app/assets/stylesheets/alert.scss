@@ -1,3 +1,9 @@
+.field_with_errors {
+  label {
+    color: $red;
+  }
+}
+
 .danger-alert {
   background-color: #fa3f5ba2;
   color: rgb(255, 255, 255);
@@ -18,10 +24,4 @@
 .errors_messages {
   display: grid;
   grid-template-columns: 1fr;
-}
-
-
-.c {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
 }
