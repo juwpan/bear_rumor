@@ -4,6 +4,7 @@
       <p class="title-add fs-6 text "><%= "Последние добавленные" %></p>
       <div class="row">
         <% @songs.each do |song| %>
+          
           <div class="col-7">
             <% if song.teach == "в архив" %>
               <p class=""><%= link_to song.title, song_path(song), class: "text-decoration-line-through" %></p>
