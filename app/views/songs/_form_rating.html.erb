@@ -1,0 +1,117 @@
+<div class="errors_messages mb-1">
+  <%= render partial: "partial/error_messages", locals: { model: @rating } %>
+</div>
+<% if current_user.present? %>
+  <% unless rating_include_user(@song, current_user) == true %>
+    <div class="text-center">
+      <%= form_with model: [@song, @rating] do |form| %>
+        <%= form.radio_button :grade, 1 %>
+        <%= form.label :grade, 1 %>
+        <%= form.radio_button :grade, 2 %>
+        <%= form.label :grade, 2 %>
+        <%= form.radio_button :grade, 3 %>
+        <%= form.label :grade, 3 %>
+        <%= form.radio_button :grade, 4 %>
+        <%= form.label :grade, 4 %>
+        <%= form.radio_button :grade, 5 %>
+        <%= form.label :grade, 5 %>
+        <div class="form-group mb-3 mt-2">
+          <div class="col-sm-offset-2 col-12">
+            <%= form.submit "Оценка", class: "btn btn-dark", data: { turbo: false } %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="mt-1 d-flex justify-content-between align-items-center">
+        <h5 class="review-stat me-4">Рейтинг песни</h5>
+        <div class="small-ratings">
+          <% case rating(@song) %>
+          <% when 1 %>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <% when 2 %>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <% when 3 %>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <% when 4 %>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star"></i>
+          <% when 5 %>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+        <%  else %>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        <% end  %>
+      </div>
+    </div>
+  <% else %>
+
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="mt-1 d-flex justify-content-between align-items-center">
+        <h5 class="review-stat me-4">Рейтинг песни</h5>
+        <div class="small-ratings">
+          <% case rating(@song) %>
+          <% when 1 %>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <% when 2 %>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <% when 3 %>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <% when 4 %>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star"></i>
+          <% when 5 %>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+          <i class="fa fa-star rating-color"></i>
+        <%  else %>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        <% end  %>
+      </div>
+    </div>
+  <%end %>
+<% end %>

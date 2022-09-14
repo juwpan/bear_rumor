@@ -4,7 +4,6 @@
       <p class="title-add fs-6 text "><%= "Последние добавленные" %></p>
       <div class="row">
         <% @songs.each do |song| %>
-          
           <div class="col-7">
             <% if song.teach == "в архив" %>
               <p class=""><%= link_to song.title, song_path(song), class: "text-decoration-line-through" %></p>
@@ -12,18 +11,17 @@
               <p class=""><%= link_to song.title, song_path(song), class: "text-decoration-none" %></p>
             <% end %>
           </div>
-
           <% if current_user.present? %>
-          <div class="col-5 text-start">
-            <%= link_to icon("pencil-fill"), edit_song_path(song) %>
-            <%= link_to icon("trash-fill"), song_path(song),
+            <div class="col-5 text-start">
+              <%= link_to icon("pencil-fill"), edit_song_path(song) %>
+              <%= link_to icon("trash-fill"), song_path(song),
                   data: { 
                     turbo_method: "delete",
                     turbo_confirm: "are_you_sure"
                     } %>
-            <%= choice_status(song) %>
+              <%= choice_status(song) %>
             </div>
-        <% end %>
+          <% end %>
         <% end %>
       </div>
     </div>

@@ -9,6 +9,13 @@
   <div class="body-form">
     <%= @song.body %>
   </div>
+  <%= render "songs/form_rating", rating: @rating %>
+</div>
+
+<div class="col-12">
+  <div class="body-form">
+    <p>Всего оценок <%= @song.ratings.count %></p>
+  </div>
 </div>
 
     <p class="title-registration"><%= link_to "Back", :back, class: "text-white-back" %></p>

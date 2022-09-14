@@ -1,17 +1,18 @@
 class User < ApplicationRecord
   has_many :songs, dependent: :destroy
+  has_many :ratings, dependent: :destroy
 
   has_one_attached :avatar do |attachable|
     attachable.variant :thumb, resize_to_fill: [100, 100]
   end
 
   devise :database_authenticatable,
-         :registerable,
-         :recoverable, 
-         :rememberable, 
-         :validatable,
-         :confirmable, 
-         :omniauthable, omniauth_providers: [:google_oauth2, :mail_ru]
+        :registerable,
+        :recoverable, 
+        :rememberable, 
+        :validatable,
+        :confirmable, 
+        :omniauthable, omniauth_providers: [:google_oauth2, :mail_ru]
 
   before_create :capitalize
   before_create :gender_choice

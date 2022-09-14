@@ -34,6 +34,7 @@ class SongsController < ApplicationController
   end
 
   def show
+    @rating = @song.ratings.build
   end
 
   def index

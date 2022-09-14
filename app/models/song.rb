@@ -2,11 +2,13 @@ class Song < ApplicationRecord
   include PgSearch::Model
 
   belongs_to :user
+  has_many :ratings, dependent: :destroy
 
   has_many :author_uniqs, dependent: :destroy
   has_many :authors, through: :author_uniqs
 
   before_create :save_array_authors
+
 
   validates :title, presence: true
   validates :body, presence: true
